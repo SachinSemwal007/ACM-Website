@@ -19,16 +19,12 @@ const Home = () => {
       <Navbar />
       <Header />
       <Carousel />
-
-      {/* First Card - Cybersecurity */}
       <CardInfo
         image={FutureInnovation}
         smallTopic="Cyber Security"
         mainHeading="Secure Your Digital World"
         description="Protect your business from modern threats with intelligent cybersecurity solutions built to detect, defend, and prevent breaches in real-time."
       />
-
-      {/* Second Card - Artificial Intelligence (Reversed Layout) */}
       <CardInfo
         image={EmpoweringAI}
         smallTopic="Artificial Intelligence"
