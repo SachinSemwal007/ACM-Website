@@ -17,7 +17,7 @@ const Footer = () => {
           <img
             src={logo} // change to your actual logo path
             alt="Company Logo"
-            className="w-28 -mb-9 mx-auto "
+            className="w-28 -mb-2 mx-auto "
           />
           <p className="text-center font-sans font-semibold text-white text-shadow-gray-900 text-shadow-2xs">Artificial Computing</p>
           <p className="text-center font-sans font-semibold text-white text-shadow-gray-900 text-shadow-2xs" > Machine</p>
@@ -25,8 +25,6 @@ const Footer = () => {
 
         {/* Footer Main Links and Info */}
         <div className="w-full lg:w-3/4 grid grid-cols-1  gap-6 text-sm text-gray-700">
-          {/* Navigation Links */}
-          {/* Navigation Links */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
                 {[
                     "Company Overview",

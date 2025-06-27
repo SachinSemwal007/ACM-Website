@@ -35,30 +35,28 @@ const Home = () => {
 
       <JoinSection />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 py-8 max-w-[85%]  mx-auto my-20">
-  <Cards
-    image="https://bsmedia.business-standard.com/_media/bs/img/article/2025-03/09/full/1741498516-8066.jpg?im=FeatureCrop,size=(826,465)"
-    title="Aircraft Detection"
-    description="A smart chatbot built using NLP and machine learning to handle customer queries in real time."
-  />
-  <Cards
-    image="https://img.freepik.com/premium-photo/aerial-view-modern-city-with-glowing-digital-network-running-down-street_14117-1104552.jpg"
-    title="Gov and ACM"
-    description="A smart chatbot built using NLP and machine learning to handle customer queries in real time."
-  />
-  <Cards
-    image="https://www.technetexperts.com/wp-content/uploads/2024/08/AI-And-Robotics.jpg"
-    title="Robotic Based Project"
-    description="A smart chatbot built using NLP and machine learning to handle customer queries in real time."
-  />
-  <Cards
-    image="https://www.repeato.app/wp-content/uploads/2024/06/AI-computer-vision-automation.jpg"
-    title="Computer Vision Project"
-    description="A smart chatbot built using NLP and machine learning to handle customer queries in real time."
-  />
-</div>
-
-
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto my-12 sm:my-16 lg:my-20">
+        <Cards
+          image="https://bsmedia.business-standard.com/_media/bs/img/article/2025-03/09/full/1741498516-8066.jpg?im=FeatureCrop,size=(826,465)"
+          title="Aircraft Detection"
+          description="A smart chatbot built using NLP and machine learning to handle customer queries in real time."
+        />
+        <Cards
+          image="https://img.freepik.com/premium-photo/aerial-view-modern-city-with-glowing-digital-network-running-down-street_14117-1104552.jpg"
+          title="Gov and ACM"
+          description="A smart chatbot built using NLP and machine learning to handle customer queries in real time."
+        />
+        <Cards
+          image="https://www.technetexperts.com/wp-content/uploads/2024/08/AI-And-Robotics.jpg"
+          title="Robotic Based Project"
+          description="A smart chatbot built using NLP and machine learning to handle customer queries in real time."
+        />
+        <Cards
+          image="https://www.repeato.app/wp-content/uploads/2024/06/AI-computer-vision-automation.jpg"
+          title="Computer Vision Project"
+          description="A smart chatbot built using NLP and machine learning to handle customer queries in real time."
+        />
+      </div>
 
       <FeatureGrid />
       <Footer />

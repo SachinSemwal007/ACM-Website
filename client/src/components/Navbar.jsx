@@ -9,44 +9,48 @@ const Navbar = () => {
   return (
     <nav className="bg-white  shadow-md transition-colors">
       <div className="px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          {/* Logo */}
+        <div className="flex justify-between h-20 items-center">
+
+{/* logo  */}
           <div className="flex-shrink-0">
             <img src={logo} alt="ACM" className="h-10 w-auto" />
           </div>
 
+         
           {/* Navigation Links */}
-          <div className="hidden md:flex space-x-6 w-full pl-16">
-            <a href="#" className="text-black hover:text-blue-900 lg:text-[18px] text-[14px]">
+          <div className="hidden md:flex space-x-6 w-full pl-10 lg:px-10 ">
+            <a href="#" className="text-black hover:text-blue-900 lg:text-[15px] text-[13px]">
               PRODUCT
             </a>
-            <a href="#" className="text-black hover:text-blue-900 lg:text-[18px] text-[14px]">
+            <a href="#" className="text-black hover:text-blue-900 lg:text-[15px] text-[13px]">
               SUPPORT
             </a>
-            <a href="#" className="text-black hover:text-blue-900 lg:text-[18px] text-[14px]">
+            <a href="#" className="text-black hover:text-blue-900 lg:text-[15px] text-[13px]">
               SOLUTION
             </a>
-            <a href="#" className="text-black hover:text-blue-900 lg:text-[18px] text-[14px]">
+            <a href="#" className="text-black hover:text-blue-900 lg:text-[15px] text-[13px]">
               ABOUT US
             </a>
           </div>
 
           {/* Search and Toggle */}
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden md:flex items-center space-x-4 flex-shrink-0">
             <div className="relative">
               <input
                 type="text"
                 placeholder="Search..."
-                className="pl-3 pr-9 py-1 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="pl-3 pr-10 py-2 w-48 lg:w-56 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <Search className="absolute right-2 top-2 text-gray-500 dark:text-gray-300" size={18} />
+              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-300" size={18} />
             </div>
 
-            {/* ✅ Properly aligned dark mode toggle */}
-            <DarkModeToggle />
+           
+            <div className="flex-shrink-0">
+              <DarkModeToggle />
+            </div>
           </div>
 
-          {/* Hamburger for Mobile */}
+{/* mobile menu icon */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -74,17 +78,21 @@ const Navbar = () => {
             <a href="#" className="text-gray-700 dark:text-white hover:text-blue-600">
               About Us
             </a>
-            <div className="flex mt-2 items-center gap-2">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="w-full pl-3 pr-10 py-1 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <Search className="text-gray-500 dark:text-gray-300" size={18} />
+            <div className="flex mt-3 items-center gap-2">
+              <div className="relative flex-1">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="w-full pl-3 pr-10 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-300" size={18} />
+              </div>
             </div>
 
-            {/* Optional: Toggle in mobile menu */}
-            <DarkModeToggle />
+{/* otpional toggke menu */}
+            <div className="mt-3">
+              <DarkModeToggle />
+            </div>
           </div>
         </div>
       )}
