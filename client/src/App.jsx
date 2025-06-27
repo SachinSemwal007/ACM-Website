@@ -1,12 +1,15 @@
-import React from 'react'
-import Home from './pages/Home';
+import React from "react";
+import Home from "./pages/Home";
+
 
 const App = () => {
   return (
-    <div >
-        <Home/>
-    </div>
-  )
-}
+    
+      <div className="bg-teal-100 ">
+        <Home />
+      </div>
+   
+  );
+};
 
 export default App;

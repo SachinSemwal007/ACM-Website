@@ -12,6 +12,7 @@ import Cards from '../components/Cards.jsx';
 // Import images
 import FutureInnovation from '../assets/FutureInnovation.jpg';
 import EmpoweringAI from '../assets/EmpoweringAI.jpg';
+import { ModeToggle } from '../components/ThemeToggle.jsx';
 
 const Home = () => {
   return (

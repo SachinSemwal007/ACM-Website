@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Menu, X, Search } from "lucide-react";
 import logo from "../assets/ACM.png";
 import DarkModeToggle from "./DarkModeToggle";
+import { ModeToggle } from "@/components/ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +47,7 @@ const Navbar = () => {
 
            
             <div className="flex-shrink-0">
-              <DarkModeToggle />
+                  <ModeToggle/>
             </div>
           </div>
 
@@ -91,7 +92,7 @@ const Navbar = () => {
 
 {/* otpional toggke menu */}
             <div className="mt-3">
-              <DarkModeToggle />
+                  <ModeToggle />
             </div>
           </div>
         </div>
