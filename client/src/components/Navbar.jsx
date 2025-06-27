@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Menu, X, Search } from "lucide-react";
 import logo from "../assets/ACM2.png";
 import DarkModeToggle from "./DarkModeToggle";
+import { ModeToggle } from "@/components/ThemeToggle";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -64,7 +65,7 @@ const Navbar = () => {
             </div>
 
             <div className="flex-shrink-0">
-              <DarkModeToggle />
+                  <ModeToggle/>
             </div>
           </div>
 
@@ -110,6 +111,10 @@ const Navbar = () => {
             ABOUT US
           </a>
 
+
+{/* otpional toggke menu */}
+  
+
           <div className="flex mt-3 items-center gap-2">
             <div className="relative flex-1">
               <input
@@ -118,6 +123,7 @@ const Navbar = () => {
                 className="w-full pl-3 pr-10 py-2 border border-gray-300 rounded-md bg-white text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={18} />
+
             </div>
           </div>
 

@@ -1,3 +1,4 @@
+
 // App.jsx
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -7,8 +8,10 @@ import Product from "./pages/Products.jsx";
 import Solution from "./pages/Solution.jsx";
 import Support from "./pages/Support.jsx";
 
+
 function App() {
   return (
+
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,5 +23,6 @@ function App() {
     </BrowserRouter>
   );
 }
+
 
 export default App;
