@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white  shadow-md transition-colors">
+    <nav className="bg-white dark:bg-black/50 shadow-md transition-colors">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
@@ -58,8 +58,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Search..."
-                // className="pl-3 pr-10 py-2 w-48 lg:w-56 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                className="pl-3 pr-10 py-2 w-48 lg:w-56 border border-gray-300  rounded-md bg-white  text-black  focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                className="pl-3 pr-10 py-2 w-48 lg:w-56 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-300" size={18} />
             </div>
