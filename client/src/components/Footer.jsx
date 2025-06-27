@@ -17,7 +17,7 @@ const Footer = () => {
           <img
             src={logo} // change to your actual logo path
             alt="Company Logo"
-            className="w-28 -mb-2 mx-auto "
+            className="w-48 -mb-2 mx-auto "
           />
           <p className="text-center font-sans font-semibold text-white text-shadow-gray-900 text-shadow-2xs">Artificial Computing</p>
           <p className="text-center font-sans font-semibold text-white text-shadow-gray-900 text-shadow-2xs" > Machine</p>
