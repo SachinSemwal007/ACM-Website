@@ -1,16 +1,26 @@
 
 // App.jsx
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs.jsx";
 import Product from "./pages/Products.jsx";
 import Solution from "./pages/Solution.jsx";
-import Support from "./pages/Support.jsx";
 import VantaWavesBackground from "./components/VantaWavesBackground.jsx";
-
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Support from "./pages/Support.jsx";
 function App() {
+
+useEffect(() => {
+  AOS.init({
+    duration: 1000,
+    once: false,          // 🔁 Enables repeat on scroll
+    mirror: true,         // 👥 Also animate on scroll-up
+    offset: 100,          // 👇 Start animation 100px before element comes into view
+  });
+}, []);
+
   return (
 
     <BrowserRouter>
@@ -19,8 +29,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/support" element={<Support/>} />
           <Route path="/product" element={<Product />} />
-          <Route path="/support" element={<Support />} />
           <Route path="/solution" element={<Solution />} />
         </Routes>
       </div>

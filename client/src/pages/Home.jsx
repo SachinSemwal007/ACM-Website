@@ -71,11 +71,11 @@ const Home = () => {
 
       {/* Floating Particles */}
       <div className="fixed top-16 right-1/4 transform z-5">
-        <div className="w-[40px] h-[40px] bg-black dark:bg-white rounded-full shadow-[0_0_12px_3px_rgba(0,0,0,0.08)] dark:shadow-[0_0_12px_3px_rgba(255,255,255,0.08)] opacity-40 dark:opacity-40 animate-ping" />
+        <div className="w-[40px] h-[40px] bg-black dark:bg-white rounded-full shadow-[0_0_12px_3px_rgba(0,0,0,0.08)] dark:shadow-[0_0_12px_3px_rgba(255,255,255,0.08)] opacity-40 dark:opacity-40 animate-pulse" />
       </div>
 
       <div className="fixed bottom-1/3 left-1/4 transform z-5">
-        <div className="w-[50px] h-[50px] bg-black dark:bg-white rounded-full shadow-[0_0_14px_4px_rgba(0,0,0,0.1)] dark:shadow-[0_0_14px_4px_rgba(255,255,255,0.1)] opacity-35 dark:opacity-35 animate-ping" style={{animationDelay: '1s'}} />
+        <div className="w-[50px] h-[50px] bg-black dark:bg-white rounded-full shadow-[0_0_14px_4px_rgba(0,0,0,0.1)] dark:shadow-[0_0_14px_4px_rgba(255,255,255,0.1)] opacity-35 dark:opacity-35 animate-pulse" style={{animationDelay: '1s'}} />
       </div>
 
       <div className="relative z-10 backdrop-blur-sm">

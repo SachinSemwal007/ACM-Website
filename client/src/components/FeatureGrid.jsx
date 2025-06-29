@@ -28,6 +28,7 @@ const FeatureGrid = () => {
       {/* Large AI Box */}
       <a
         href="/ai"
+        data-aos="fade-right"
         className="bg-gray-200 p-6 flex flex-col justify-between rounded-md shadow-md w-full lg:w-[48%] min-h-[250px] hover:bg-gray-300 transition-all
                    dark:bg-gray-800 dark:hover:bg-gray-700"
       >
@@ -38,16 +39,22 @@ const FeatureGrid = () => {
         <p className="text-gray-600 mt-3 dark:text-gray-300">
           Discover the world of Artificial Intelligence and how it's powering the future.
         </p>
-        <button className="mt-4 w-max px-4 py-2 border border-blue-500 text-blue-500 bg-white rounded hover:bg-blue-500 hover:text-white transition duration-300
-                           dark:bg-transparent dark:text-blue-400 dark:hover:bg-blue-600">
-          Explore
-        </button>
+
+        {/* Flip Button */}
+        <div className="relative mt-4 w-max">
+          <button className="flip-btn px-4 py-2 border border-blue-500 text-blue-500 bg-white rounded transition duration-300
+                             dark:bg-transparent dark:text-blue-400 dark:hover:bg-blue-600">
+            <span className="front">Explore</span>
+            <span className="back">Let's Go</span>
+          </button>
+        </div>
       </a>
 
       {/* Small Feature Boxes */}
       {features.map((feature, idx) => (
         <a
           key={idx}
+          data-aos={idx % 2 === 0 ? "fade-left" : "fade-right"}
           href={feature.link}
           className="bg-black/25 w-[47%] sm:w-[30%] md:w-[23%] lg:w-[15%] aspect-square flex flex-col items-center justify-center rounded-md text-center font-semibold text-gray-700 hover:bg-gray-300 transition-all space-y-2
                      dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-700"
