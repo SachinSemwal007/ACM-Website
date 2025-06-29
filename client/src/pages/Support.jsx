@@ -5,7 +5,10 @@ const Support = () => {
   return (
     <div>
         <Navbar/>
-        support
+        <Header
+                title="Support Section"
+                description="Innovative AI-powered solutions designed to streamline operations, enhance efficiency, and deliver exceptional value to your business."
+            />
     </div>
   )
 }

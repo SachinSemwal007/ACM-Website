@@ -16,7 +16,7 @@ const features = [
   { name: "Open Source", link: "/open-source", icon: <GitBranch size={34} /> },
   { name: "Gaming", link: "/gaming", icon: <Gamepad2 size={34} /> },
   { name: "Cloud", link: "/cloud", icon: <Cloud size={34} /> },
-  { name: "AI PC", link: "/ai-pc", icon: <Bot size={34} /> }, // ✅ Replaced CpuZap with Bot
+  { name: "AI PC", link: "/ai-pc", icon: <Bot size={34} /> },
   { name: "Edge", link: "/edge", icon: <Share2 size={34} /> },
   { name: "HPC", link: "/hpc", icon: <Cpu size={34} /> },
   { name: "Cyber Security", link: "/cyber-security", icon: <Shield size={34} /> },
@@ -28,16 +28,18 @@ const FeatureGrid = () => {
       {/* Large AI Box */}
       <a
         href="/ai"
-        className="bg-gray-200 p-6 flex flex-col justify-between rounded-md shadow-md w-full lg:w-[48%] min-h-[250px] hover:bg-gray-300 transition-all"
+        className="bg-gray-200 p-6 flex flex-col justify-between rounded-md shadow-md w-full lg:w-[48%] min-h-[250px] hover:bg-gray-300 transition-all
+                   dark:bg-gray-800 dark:hover:bg-gray-700"
       >
         <div className="flex items-center gap-3">
-          <Brain className="text-blue-600" size={32} />
-          <h2 className="text-2xl font-bold text-gray-800">AI</h2>
+          <Brain className="text-blue-600 dark:text-blue-400" size={32} />
+          <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">AI</h2>
         </div>
-        <p className="text-gray-600 mt-3">
+        <p className="text-gray-600 mt-3 dark:text-gray-300">
           Discover the world of Artificial Intelligence and how it's powering the future.
         </p>
-        <button className="mt-4 w-max px-4 py-2 border border-blue-500 text-blue-500 bg-white rounded hover:bg-blue-500 hover:text-white transition duration-300">
+        <button className="mt-4 w-max px-4 py-2 border border-blue-500 text-blue-500 bg-white rounded hover:bg-blue-500 hover:text-white transition duration-300
+                           dark:bg-transparent dark:text-blue-400 dark:hover:bg-blue-600">
           Explore
         </button>
       </a>
@@ -47,9 +49,10 @@ const FeatureGrid = () => {
         <a
           key={idx}
           href={feature.link}
-          className="bg-black/25 w-[47%] sm:w-[30%] md:w-[23%] lg:w-[15%] aspect-square flex flex-col items-center justify-center rounded-md text-center font-semibold text-gray-700 hover:bg-gray-300 transition-all space-y-2"
+          className="bg-black/25 w-[47%] sm:w-[30%] md:w-[23%] lg:w-[15%] aspect-square flex flex-col items-center justify-center rounded-md text-center font-semibold text-gray-700 hover:bg-gray-300 transition-all space-y-2
+                     dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-700"
         >
-          <div className=" text-blue-500">{feature.icon}</div>
+          <div className="text-blue-500 dark:text-blue-400">{feature.icon}</div>
           <div>{feature.name}</div>
         </a>
       ))}

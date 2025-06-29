@@ -115,20 +115,20 @@ const Carousel = () => {
                   style={{ backgroundImage: `url(${slide.image})` }}
                 >
                   {/* Content Overlay */}
-                  <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 sm:p-6 text-white">
-                    <div className={`transition-all duration-500 ${isActive ? 'opacity-100' : 'opacity-80'}`}>
-                      <span className="text-sm sm:text-lg text-blue-300 font-medium">{slide.topic}</span>
-                      <h2 className={`font-bold mt-1 mb-2 ${isActive ? 'text-2xl sm:text-4xl' : 'text-base sm:text-lg'}`}>
+                  <div className="absolute inset-0 bg-black/40 dark:bg-black/10 flex flex-col justify-end p-4 sm:p-6 text-white">
+                    <div className={`transition-all duration-500 dark:backdrop-blur-lg rounded-[20px] ${isActive ? 'opacity-100' : 'opacity-80'}`}>
+                      <span className="text-sm sm:text-lg text-blue-300 font-medium px-10 py-2">{slide.topic}</span>
+                      <h2 className={`font-bold mt-1 mb-2 ${isActive ? 'text-2xl sm:text-4xl' : 'text-base sm:text-lg'} px-10 `}>
                         {slide.title}
                       </h2>
                       {isActive && (
-                        <p className="text-xs sm:text-sm text-gray-200 mb-3 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-gray-200 mb-3 leading-relaxed px-10 ">
                           {slide.description}
                         </p>
                       )}
                       <a 
                         href={slide.link} 
-                        className="inline-flex items-center text-blue-300 hover:text-blue-200 text-xs sm:text-sm font-medium"
+                        className="inline-flex items-center text-blue-300 hover:text-blue-200 text-xs sm:text-sm font-medium px-10 pb-4 "
                       >
                         Learn More
                         <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
