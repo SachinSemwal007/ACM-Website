@@ -1,34 +1,4 @@
-// import React from 'react';
-// import Navbar from '../components/Navbar';
-// import Carousel from '../components/Carousel.jsx';
-// import CardInfo from '../components/CardInfo.jsx';
-// import FeatureGrid from '../components/FeatureGrid.jsx';
-// import Footer from '../components/Footer.jsx';
-// import JoinSection from '../components/JoinSection.jsx';
-// import Header from '../components/Header.jsx';
-// import Cards from '../components/Cards.jsx';
-// import FutureInnovation from '../assets/FutureInnovation.jpg';
-// import EmpoweringAI from '../assets/EmpoweringAI.jpg';
-// import { ModeToggle } from '../components/ThemeToggle.jsx';
-// import bg from "../assets/bg.jpg";
-// import VantaBackground from "../components/VantaBackground";
 
-
-// const Home = () => {
-//   return (
-//     <div className="relative min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-[#0f0f0f] dark:via-[#1e1e1e] dark:to-[#2d2d2d] backdrop-blur-3xl transition-all duration-700 overflow-hidden">
-
-//       {/* Enhanced Background Image with Overlay */}
-//       <div
-//         className="fixed inset-0 z-0 bg-cover bg-center opacity-15 dark:opacity-8 transition-opacity duration-700"
-//         style={{
-//           backgroundImage: `url(${bg})`,
-//           backgroundAttachment: "fixed",
-//         }}
-//       />
-      
-//       {/* Gradient Overlay for Better Contrast */}
-//       <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent via-white/10 to-white/30 dark:from-transparent dark:via-black/20 dark:to-black/40" />
 
 //       {/* Multiple Glowing Squares with Different Sizes and Positions */}
       
@@ -225,12 +195,14 @@ const Home = () => {
         </div>
 
         <div className="relative">
+          {/* <VantaWavesBackground/> */}
+          {/* <StarBackground/> */}
           <Header />
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 dark:from-green-400/30 dark:to-cyan-400/30 blur-3xl animate-tech-pulse" />
         </div>
 
         <div className="relative z-10">
-          <Carousel />
+          <Carousel /> 
         </div>
 
         <div className="relative">
