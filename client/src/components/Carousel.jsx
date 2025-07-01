@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import img1 from "../assets/Cyber.jpg";
 import img2 from "../assets/AI.jpg";
 import img3 from "../assets/CyberSecurity.jpg";
-
 const slides = [
   {
     topic: "Topic 1",
@@ -28,136 +27,119 @@ const slides = [
 ];
 
 const Carousel = () => {
-  const [current, setCurrent] = useState(0);
+  const [expandedIndex, setExpandedIndex] = useState(0);
 
-  const goToSlide = (index) => {
-    setCurrent(index);
-  };
-
-  const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+  const handleExpand = (index) => {
+    setExpandedIndex(index);
   };
 
   return (
-    <div className="w-full mx-auto sm:mt-10 px-[10%]">
-      {/* Book-style Container with Arrow Buttons */}
-      <div className="relative h-[50vh] sm:h-[500px] perspective-1000">
-        {/* Left Arrow */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-5 top-1/2 transform -translate-y-1/2 z-40 bg-white/10 backdrop-blur-lg hover:bg-white/30 rounded-full p-2 sm:p-3 transition-all duration-300 hover:scale-110 border border-white/20"
-          aria-label="Previous slide"
-        >
-          <svg 
-            className="w-4 h-4 sm:w-6 sm:h-6 text-white" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-
-        {/* Right Arrow */}
-        <button
-          onClick={nextSlide}
-          className="absolute right-5 top-1/2 transform -translate-y-1/2 z-40 bg-white/10 backdrop-blur-lg hover:bg-white/30 rounded-full p-2 sm:p-3 transition-all duration-300 hover:scale-110 border border-white/20"
-          aria-label="Next slide"
-        >
-          <svg 
-            className="w-4 h-4 sm:w-6 sm:h-6 text-white" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-
-        <div className="flex items-center justify-center h-full px-8 sm:px-12">
-          {slides.map((slide, index) => {
-            const offset = index - current;
-            const isActive = index === current;
-            const isPrev = offset === -1 || (current === 0 && index === slides.length - 1);
-            const isNext = offset === 1 || (current === slides.length - 1 && index === 0);
-            
-            return (
-              <div
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`absolute transition-all duration-1000 ease-in-out cursor-pointer rounded-lg shadow-2xl overflow-hidden ${
-                  isActive 
-                    ? 'w-full h-full z-30 scale-100 opacity-100' 
-                    : isPrev
-                    ? 'w-[85%] sm:w-[75%] h-[85%] sm:h-[90%] z-20 scale-90 opacity-70 -translate-x-8 sm:-translate-x-16 rotate-y-15'
-                    : isNext  
-                    ? 'w-[85%] sm:w-[75%] h-[85%] sm:h-[90%] z-20 scale-90 opacity-70 translate-x-8 sm:translate-x-16 -rotate-y-15'
-                    : 'w-[70%] sm:w-[60%] h-[70%] sm:h-[80%] z-10 scale-75 opacity-40'
-                }`}
-                style={{
-                  transformStyle: 'preserve-3d',
-                  transform: isActive 
-                    ? 'translateX(0) rotateY(0deg) scale(1)' 
-                    : isPrev
-                    ? 'translateX(-40px) sm:translateX(-80px) rotateY(15deg) scale(0.9)'
-                    : isNext
-                    ? 'translateX(40px) sm:translateX(80px) rotateY(-15deg) scale(0.9)'
-                    : `translateX(${offset * 20}px) sm:translateX(${offset * 40}px) rotateY(${offset * 20}deg) scale(0.75)`,
-                }}
+    <div className="w-[85%] mx-auto mt-10 px-4">
+              <div className="flex h-[70vh] gap-1 rounded-xl overflow-hidden">
+        {slides.map((slide, index) => {
+          const isExpanded = index === expandedIndex;
+          
+          return (
+            <div
+              key={index}
+              className={`relative transition-all duration-700 ease-in-out cursor-pointer overflow-hidden shadow-lg ${
+                isExpanded 
+                  ? 'flex-[12] opacity-100 h-full' 
+                  : 'flex-[0.8] opacity-80 hover:opacity-100 h-[85%] self-center shadow-xl hover:shadow-2xl'
+              }`}
+              onClick={() => handleExpand(index)}
+            >
+              {/* Background Image */}
+              <div 
+                className="w-full h-full bg-cover bg-center relative"
+                style={{ backgroundImage: `url(${slide.image})` }}
               >
-                {/* Page Background */}
-                <div 
-                  className="w-full h-full bg-cover bg-center relative"
-                  style={{ backgroundImage: `url(${slide.image})` }}
-                >
-                  {/* Content Overlay */}
-                  <div className="absolute inset-0 bg-black/40 dark:bg-black/10 flex flex-col justify-end p-4 sm:p-6 text-white">
-                    <div className={`transition-all duration-500 dark:backdrop-blur-lg rounded-[20px] ${isActive ? 'opacity-100' : 'opacity-80'}`}>
-                      <span className="text-sm sm:text-lg text-blue-300 font-medium px-10 py-2">{slide.topic}</span>
-                      <h2 className={`font-bold mt-1 mb-2 ${isActive ? 'text-2xl sm:text-4xl' : 'text-base sm:text-lg'} px-10 `}>
-                        {slide.title}
-                      </h2>
-                      {isActive && (
-                        <p className="text-xs sm:text-sm text-gray-200 mb-3 leading-relaxed px-10 ">
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black/40"></div>
+                
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                  {/* Collapsed State - Vertical Text */}
+                  {!isExpanded && (
+                    <div className="transform -rotate-90 origin-bottom-left absolute bottom-6 left-6 whitespace-nowrap">
+                      <h3 className="text-lg font-bold mb-2">{slide.title}</h3>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-blue-300 text-sm">{slide.topic}</span>
+                        <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                          <svg 
+                            className="w-4 h-4 text-white transform rotate-90" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Expanded State - Full Content */}
+                  {isExpanded && (
+                    <div className="transform transition-all duration-500 delay-200 opacity-100">
+                      <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6">
+                        <span className="text-blue-300 text-lg font-medium">{slide.topic}</span>
+                        <h2 className="text-4xl font-bold mt-2 mb-4">{slide.title}</h2>
+                        <p className="text-gray-200 mb-6 leading-relaxed text-lg max-w-2xl">
                           {slide.description}
                         </p>
-                      )}
-                      <a 
-                        href={slide.link} 
-                        className="inline-flex items-center text-blue-300 hover:text-blue-200 text-xs sm:text-sm font-medium px-10 pb-4 "
+                        <a 
+                          href={slide.link} 
+                          className="inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                        >
+                          Learn More
+                          <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                
+                {/* Expand Button for Non-Expanded Slides */}
+                {!isExpanded && (
+                  <div className="absolute top-6 right-6">
+                    <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-110">
+                      <svg 
+                        className="w-5 h-5 text-white" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
                       >
-                        Learn More
-                        <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                      </svg>
                     </div>
                   </div>
-                  
-                  {/* Book spine shadow effect */}
-                  <div className="absolute left-0 top-0 w-1 sm:w-2 h-full bg-black/20"></div>
-                </div>
+                )}
+                
+                {/* Gradient Border for Active Strip */}
+                {isExpanded && (
+                  <div className="absolute inset-0 border-4 border-blue-400/50 rounded-lg pointer-events-none"></div>
+                )}
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
-
-      {/* Simple Indicators */}
-      <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
+      
+      {/* Navigation Indicators */}
+      <div className="flex justify-center mt-8 space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === current 
-                ? 'bg-blue-500 w-6 sm:w-8' 
-                : 'bg-gray-400 hover:bg-gray-300'
+            onClick={() => handleExpand(index)}
+            className={`transition-all duration-300 ${
+              index === expandedIndex 
+                ? 'w-12 h-3 bg-blue-500 rounded-full' 
+                : 'w-3 h-3 bg-gray-400 hover:bg-gray-300 rounded-full'
             }`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>

@@ -51,18 +51,25 @@ const FeatureGrid = () => {
       </a>
 
       {/* Small Feature Boxes */}
-      {features.map((feature, idx) => (
-        <a
-          key={idx}
-          data-aos={idx % 2 === 0 ? "fade-left" : "fade-right"}
-          href={feature.link}
-          className="bg-black/25 w-[47%] sm:w-[30%] md:w-[23%] lg:w-[15%] aspect-square flex flex-col items-center justify-center rounded-md text-center font-semibold text-gray-700 hover:bg-gray-300 transition-all space-y-2
-                     dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-700"
-        >
-          <div className="text-blue-500 dark:text-blue-400">{feature.icon}</div>
-          <div>{feature.name}</div>
-        </a>
-      ))}
+     {features.map((feature, idx) => (
+          <a
+            key={idx}
+            data-aos={idx % 2 === 0 ? "fade-left" : "fade-right"}
+            data-aos-delay={`${idx * 100}`}
+            href={feature.link}
+            className="group bg-[#262626] w-[47%] sm:w-[30%] md:w-[23%] lg:w-[15%] aspect-square flex flex-col items-center justify-center rounded-md text-center font-semibold text-gray-700 hover:bg-gray-300 transition-all space-y-2
+                      dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-700"
+          >
+            <div className="text-blue-500 dark:text-blue-300 group-hover:text-blue-900 dark:group-hover:text-white transition-colors duration-300">
+              {feature.icon}
+            </div>
+            <div className="text-white group-hover:text-black dark:group-hover:text-white transition-colors duration-300">
+              {feature.name}
+            </div>
+          </a>
+        ))}
+
+
     </div>
   );
 };
