@@ -202,7 +202,6 @@
 // export default Home;
 
 
-import React from 'react';
 import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel.jsx';
 import CardInfo from '../components/CardInfo.jsx';
@@ -215,22 +214,19 @@ import FutureInnovation from '../assets/FutureInnovation.jpg';
 import EmpoweringAI from '../assets/EmpoweringAI.jpg';
 import { ModeToggle } from '../components/ThemeToggle.jsx';
 import VantaBackground from "../components/VantaBackground";
- 
 
 const Home = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
-
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900/20 to-indigo-900/30 dark:from-[#000000] dark:via-[#001122] dark:to-[#002244] transition-all duration-700 overflow-hidden">
       <VantaBackground />
-
-      <div className="relative z-10 ">
-        <div className="bg-white/40 dark:bg-black/20 backdrop-blur-md">
+      <div className="relative z-10 backdrop-blur-sm">
+        <div className="bg-slate-900/80 dark:bg-black/90 backdrop-blur-xl border-b border-cyan-500/20 dark:border-green-500/30 shadow-lg shadow-cyan-500/10 dark:shadow-green-500/20">
           <Navbar />
         </div>
 
         <div className="relative">
           <Header />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 dark:from-blue-400/10 dark:to-purple-400/10 blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 dark:from-green-400/30 dark:to-cyan-400/30 blur-3xl animate-tech-pulse" />
         </div>
 
         <div className="relative z-10">
@@ -238,7 +234,7 @@ const Home = () => {
         </div>
 
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 dark:from-blue-400/10 dark:to-purple-400/10 blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/15 to-indigo-500/15 dark:from-cyan-400/25 dark:to-blue-400/25 blur-3xl" />
           <CardInfo
             image={FutureInnovation}
             smallTopic="Cyber Security"
@@ -248,7 +244,7 @@ const Home = () => {
         </div>
 
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 dark:from-blue-400/10 dark:to-purple-400/10 blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/15 to-purple-500/15 dark:from-blue-400/25 dark:to-purple-400/25 blur-3xl" />
           <CardInfo
             image={EmpoweringAI}
             smallTopic="Artificial Intelligence"
@@ -258,12 +254,8 @@ const Home = () => {
           />
         </div>
 
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 dark:from-blue-400/10 dark:to-purple-400/10 blur-3xl" />
-        </div>
-
         <div className="relative py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto my-12 sm:my-16 lg:my-20">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 dark:from-blue-400/10 dark:to-purple-400/10 blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/15 to-blue-500/15 dark:from-green-400/25 dark:to-cyan-400/25 blur-3xl" />
           <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 p-8">
             <Cards
               image="https://bsmedia.business-standard.com/_media/bs/img/article/2025-03/09/full/1741498516-8066.jpg?im=FeatureCrop,size=(826,465)"
@@ -289,7 +281,7 @@ const Home = () => {
         </div>
 
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-violet-500/5 to-purple-500/5 dark:from-violet-400/10 dark:to-purple-400/10 blur-2xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/15 to-indigo-500/15 dark:from-purple-400/25 dark:to-blue-400/25 blur-2xl" />
           <FeatureGrid />
         </div>
 
@@ -300,3 +292,4 @@ const Home = () => {
 };
 
 export default Home;
+
