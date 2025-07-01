@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../assets/ACM2.png';
+import logo from '../assets/ACM8.png';
 import {
   Facebook,
   Twitter,
@@ -13,22 +13,17 @@ const Footer = () => {
     <footer className="bg-gray-300 dark:bg-[#111827] py-10 px-6">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 justify-between">
         {/* Logo Section */}
-        <div className="w-full lg:w-1/4">
+        <div className="w-full lg:w-1/4 flex flex-col items-center align-middle justify-center">
           <img
             src={logo}
             alt="Company Logo"
-            className="w-48 -mb-2 mx-auto"
+            className="w-[200%] -mb-2 mx-auto"
           />
-          <p className="text-center font-sans font-semibold text-white text-shadow-gray-900 text-shadow-2xs dark:text-gray-100">
-            Artificial Computing
-          </p>
-          <p className="text-center font-sans font-semibold text-white text-shadow-gray-900 text-shadow-2xs dark:text-gray-100">
-            Machine
-          </p>
+
         </div>
 
         {/* Footer Links and Info */}
-        <div className="w-full lg:w-3/4 grid grid-cols-1 gap-6 text-sm text-gray-700 dark:text-gray-300">
+        <div className="w-full lg:w-3/4 grid grid-cols-1 gap-6 text-lg text-gray-700 dark:text-gray-300 ml-10">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
             {[
               "Company Overview",
@@ -69,7 +64,7 @@ const Footer = () => {
           </div>
 
           {/* Legal Info */}
-          <div className="text-xs text-gray-600 dark:text-gray-400 space-y-2 mt-4">
+          <div className="text-sm text-gray-600 dark:text-gray-400 space-y-2 mt-4">
             <p>
               © ACM Corporation <span className="font-medium">Terms of Use</span> · Trademarks · Cookies · Privacy · Supply Chain Transparency · Site Map · Recycling
             </p>

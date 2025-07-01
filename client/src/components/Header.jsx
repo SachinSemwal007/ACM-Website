@@ -2,9 +2,9 @@ import React from 'react';
 
 const Header = ({ title, description }) => {
   // Default values if no props passed
-  const defaultTitle = "Simplify Your AI Journey";
+  const defaultTitle = "Shield Your Digital World";
   const defaultDescription =
-    "Deliver AI at scale across cloud, data center, edge, and client—that's the power of ACM.";
+    "AI Powered Protection, Defending Critical Infrastructure, ICS, Risk Assesment, Intrusion Detection & Resilient Security Architecture - thats the Power of ACM";
 
   return (
     <div className="relative flex flex-col items-center justify-center text-center py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden  ">
