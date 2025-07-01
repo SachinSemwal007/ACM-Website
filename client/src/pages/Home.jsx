@@ -11,14 +11,17 @@ import FutureInnovation from '../assets/FutureInnovation.jpg';
 import EmpoweringAI from '../assets/EmpoweringAI.jpg';
 import { ModeToggle } from '../components/ThemeToggle.jsx';
 import bg from "../assets/bg.jpg";
+import VantaWavesBackground from '../components/VantaWavesBackground.jsx';
+import StarBackground from '../components/StarBackground.jsx';
 
 const Home = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-[#0f0f0f] dark:via-[#1e1e1e] dark:to-[#2d2d2d] backdrop-blur-3xl transition-all duration-700 overflow-hidden">
-
+        {/* ✅ StarBackground only shows in dark mode */}
+    
       {/* Enhanced Background Image with Overlay */}
       <div
-        className="fixed inset-0 z-0 bg-cover bg-center opacity-15 dark:opacity-8 transition-opacity duration-700"
+        className="fixed inset-0 z-0 bg-cover bg-center opacity-15 dark:opacity-8 "
         style={{
           backgroundImage: `url(${bg})`,
           backgroundAttachment: "fixed",
@@ -27,6 +30,11 @@ const Home = () => {
       
       {/* Gradient Overlay for Better Contrast */}
       <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent via-white/10 to-white/30 dark:from-transparent dark:via-black/20 dark:to-black/40" />
+      
+        {/* ✅ StarBackground here — now above bg image/overlay but still behind content */}
+  <div className="absolute inset-0 z-0 pointer-events-none dark:block hidden">
+    <StarBackground />
+  </div>
 
       {/* Multiple Glowing Squares with Different Sizes and Positions */}
       
@@ -84,6 +92,8 @@ const Home = () => {
         </div>
         
         <div className="relative">
+          {/* <VantaWavesBackground/> */}
+          {/* <StarBackground/> */}
           <Header />
           {/* Subtle glow effect behind header */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 dark:from-blue-400/10 dark:to-purple-400/10 blur-3xl" />

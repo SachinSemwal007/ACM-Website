@@ -8,21 +8,19 @@ const VantaWavesBackground = () => {
   const [vantaEffect, setVantaEffect] = useState(null);
 
   useEffect(() => {
-    if (!vantaEffect && vantaRef.current) {
-      console.log("Initializing VANTA.WAVES on", vantaRef.current);
+    if (typeof window !== "undefined" && !vantaEffect && vantaRef.current) {
       setVantaEffect(
         WAVES({
           el: vantaRef.current,
-          THREE: THREE,
+          THREE,
           mouseControls: true,
           touchControls: true,
-          gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0x0055ff,
-          shininess: 50,
+          color: 0x00ffcc,
+          shininess: 80,
           waveHeight: 50,
           waveSpeed: 1.0,
           zoom: 1.2,
