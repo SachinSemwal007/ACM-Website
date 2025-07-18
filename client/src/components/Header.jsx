@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = ({ title, description }) => {
-  const defaultTitle = "Shield Your Digital World";
+  const defaultTitle = "SHIELD YOUR DIGITAL WORLD";
   const defaultDescription =
     "AI Powered Protection, Defending Critical Infrastructure, ICS, Risk Assesment, Intrusion Detection & Resilient Security Architecture - that's the Power of ACM";
 
@@ -26,7 +26,7 @@ const Header = ({ title, description }) => {
 
       {/* Header Content */}
       <div className="relative z-10 w-full max-w-4xl px-4 sm:px-6 lg:px-8">
-        <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-snug break-words text-gray-800 dark:text-white">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-snug break-words text-gray-800 dark:text-white">
           {title || defaultTitle}
         </h1>
         <p className="mt-2 sm:mt-4 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed break-words text-gray-600 dark:text-gray-300">

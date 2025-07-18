@@ -107,19 +107,27 @@ const Carousel = () => {
                 </div>
 
                 {!isExpanded && (
-                  <div className="absolute top-6 right-6">
-                    <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-110">
+                  <div className="absolute bottom-6 right-6">
+                    <div className="w-12 h-12 flex items-center justify-center hover:scale-110 transition-all duration-300">
                       <svg
-                        className="w-5 h-5 text-white"
+                        className="w-8 h-8 text-white"
                         fill="none"
                         stroke="currentColor"
-                        viewBox="0 0 24 24"
+                        viewBox="0 0 20 20"
                       >
+                        {/* Top-left diagonal arrow */}
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                          strokeWidth={1}
+                          d="M11 11L5 5M5 5H8M5 5V8"
+                        />
+                        {/* Bottom-right diagonal arrow */}
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1}
+                          d="M13 13L19 19M19 19H16M19 19V16"
                         />
                       </svg>
                     </div>
