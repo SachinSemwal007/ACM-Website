@@ -29,7 +29,7 @@ const CardInfo = ({
         <h5 className="text-blue-500 uppercase tracking-wide text-xs sm:text-sm font-semibold mt-2 dark:text-blue-400">
           {smallTopic}
         </h5>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-100">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  text-gray-800 dark:text-gray-100">
           {mainHeading}
         </h1>
         <p className="text-gray-600 text-sm sm:text-base md:text-lg dark:text-gray-300 leading-relaxed">

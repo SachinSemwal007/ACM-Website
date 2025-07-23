@@ -1,3 +1,12 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.urbanist {
+  font-family: 'Urbanist', sans-serif;
+}

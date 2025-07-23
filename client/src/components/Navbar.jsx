@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Menu, X, Search } from "lucide-react";
-import logo from "../assets/ACM2.png";
+import logo from "../assets/ACM9.png";
 import DarkModeToggle from "./DarkModeToggle";
-import { ModeToggle } from "@/components/ThemeToggle";
+// import { ModeToggle } from "@/components/ThemeToggle";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -11,20 +11,21 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white dark:bg-[#242526]/90 shadow-md transition-colors backdrop-blur-md">
-      <div className="px-4 sm:px-6 lg:px-8">
+      {/* <div className="px-4 sm:px-6 lg:px-8"> */}
+        <div>
         <div className="flex justify-between h-17 items-center">
           {/* Logo */}
-          <div onClick={() => navigate("/")} className="flex-shrink-0 cursor-pointer">
-            <img src={logo} alt="ACM" className="h-15 w-auto" />
+          <div onClick={() => navigate("/")} className="flex-shrink-0 pt-1 pr-1 cursor-pointer items-center h-17 bg-[#0070c0]">
+            <img src={logo} alt="ACM" className="h-15 w-auto p-1 " />
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-6 w-full pl-7 lg:pl-16">
-            {["product", "support", "solution", "about"].map((item) => (
+            {["products", "support", "solutions", "consluting"].map((item) => (
               <a
                 key={item}
                 onClick={() => navigate(`/${item}`)}
-                className="text-black dark:text-white hover:text-blue-900 dark:hover:text-blue-400 lg:text-[16px] text-[14px] cursor-pointer transition-colors"
+                className="text-[#0070c0] dark:text-white hover:text-black dark:hover:text-blue-400 lg:text-[16px] text-[14px] cursor-pointer transition-colors"
               >
                 {item.toUpperCase()}
               </a>
@@ -32,11 +33,11 @@ const Navbar = () => {
           </div>
 
           {/* Search and Toggle */}
-          <div className="hidden md:flex items-center space-x-4 flex-shrink-0">
+          <div className="hidden md:flex items-center space-x-4 flex-shrink-0 mx-2">
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search..."
+                placeholder="Search acmindia.co.in"
                 className="pl-3 pr-10 py-2 w-48 lg:w-56 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <Search
@@ -44,10 +45,12 @@ const Navbar = () => {
                 size={18}
               />
             </div>
-
+            
+            {/* dark has been hidden here for only lioght mode availbality */}
+{/* 
             <div className="flex-shrink-0">
               <ModeToggle />
-            </div>
+            </div> */}
           </div>
 
           {/* Hamburger Icon */}
@@ -84,7 +87,7 @@ const Navbar = () => {
               <div className="relative flex-1">
                 <input
                   type="text"
-                  placeholder="Search..."
+                  placeholder="Search acmndia.co.in"
                   className="w-full pl-3 pr-10 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <Search
@@ -94,9 +97,11 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="mt-3">
+{/* only light mode is made available for mobile menu aslos */}
+
+            {/* <div className="mt-3">
               <DarkModeToggle />
-            </div>
+            </div> */}
           </div>
         </div>
       )}

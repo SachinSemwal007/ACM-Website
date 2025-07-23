@@ -2,25 +2,26 @@ import React, { useState } from "react";
 import img1 from "../assets/Cyber.jpg";
 import img2 from "../assets/AI.jpg";
 import img3 from "../assets/CyberSecurity.jpg";
+import img4 from "../assets/OTSEC3.jpg"
 const slides = [
   {
-    topic: "Topic 1",
-    title: "Natural Language Processing",
-    description: "Harness the power of NLP to understand, analyze, and respond to human language with speed, accuracy, and intelligent automation.",
+    topic: "OT FOR INDUSTRY",
+    title: "Protecting Critical Infrastructure: Prespectives on Industrial OT Security Environements",
+    // description: "Harness the power of NLP to understand, analyze, and respond to human language with speed, accuracy, and intelligent automation.",
     link: "#",
-    image: img1,
+    image: img4,
   },
   {
-    topic: "Topic 2",
-    title: "Artificial Intelligence",
-    description: "Unlock the full potential of your business with our intelligent AI platform that automates tasks, analyzes data, and boosts productivity.",
+    topic: "INNOVATE,  AUTOMATE  &    ELEVATE",
+    title: "AI for a Limitless Future with Artificial Computing Machines",
+    // description: "Unlock the full potential of your business with our intelligent AI platform that automates tasks, analyzes data, and boosts productivity.",
     link: "#",
     image: img2,
   },
   {
-    topic: "Topic 3",
-    title: "Cyber Security",
-    description: "Protect your business from cyber threats with advanced security solutions that detect, prevent, and respond to attacks in real-time.",
+    topic: "NATIONAL DEFENSE",
+    title: "Innovating for Supremecy. Desigining for Security",
+    description: "Leveraging innovation and expertise to built resilient defense soltions for a safer, stronger nations.  ",
     link: "#",
     image: img3,
   },
@@ -62,12 +63,12 @@ const Carousel = () => {
                 className="w-full h-full bg-cover bg-center relative"
                 style={{ backgroundImage: `url(${slide.image})` }}
               >
-                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 bg-black/10"></div>
 
                 <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6 text-white">
                   {!isExpanded && (
                     <div className="transform -rotate-90 origin-bottom-left absolute bottom-6 left-6 whitespace-nowrap">
-                      <h3 className="text-sm sm:text-base font-bold mb-2">{slide.title}</h3>
+                      <h3 className="text-sm sm:text-base  mb-2">{slide.title}</h3>
                       <div className="flex items-center space-x-2">
                         <span className="text-blue-300 text-xs sm:text-sm">{slide.topic}</span>
                         <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
@@ -86,15 +87,15 @@ const Carousel = () => {
 
                   {isExpanded && (
                     <div className="transform transition-all duration-500 delay-200 opacity-100">
-                      <div className="bg-black/20 sm:backdrop-blur-sm rounded-2xl p-4 sm:p-6">
-                        <span className="text-blue-300 text-sm sm:text-base font-medium">{slide.topic}</span>
-                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-2 mb-3">{slide.title}</h2>
+                      <div className="bg-black/40  rounded-sm  p-4 sm:p-6">
+                        <span className="text-white text-sm sm:text-base font-medium">{slide.topic}</span>
+                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl  mt-2 mb-3">{slide.title}</h2>
                         <p className="text-gray-200 mb-4 sm:mb-6 leading-relaxed text-xs sm:text-sm md:text-base max-w-2xl">
                           {slide.description}
                         </p>
                         <a
                           href={slide.link}
-                          className="inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg font-medium transition-colors text-sm sm:text-base"
+                          className="inline-flex items-center justify-start  hover:text-blue-600 text-white  py-2  sm:py-3 rounded-lg font-medium transition-colors text-sm sm:text-base"
                         >
                           Learn More
                           <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
