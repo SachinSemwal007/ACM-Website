@@ -6,11 +6,9 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs.jsx";
 import Product from "./pages/Products.jsx";
 import Solution from "./pages/Solution.jsx";
-import VantaWavesBackground from "./components/VantaWavesBackground.jsx";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Support from "./pages/Support.jsx";
-import StarBackground from "./components/StarBackground.jsx";
 function App() {
 
 useEffect(() => {
@@ -26,8 +24,6 @@ useEffect(() => {
 
     <BrowserRouter>
      <div className="relative w-full min-h-screen overflow-hidden text-white">
-        {/* <VantaWavesBackground /> */}
-           <StarBackground/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
