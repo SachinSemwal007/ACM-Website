@@ -47,12 +47,12 @@ const Footer = () => {
 
           {/* Legal Section */}
           <div className="text-xs sm:text-sm text-gray-600 space-y-2">
-            <p className="flex  justify-center lg:justify-start gap-7 font-medium">
+            <div className="flex  justify-center lg:justify-start gap-7 font-medium">
               <p>© Artificial Computing Machines</p>  |
               <span>Terms of Use</span> |
               <p>Cookies</p> |
               <p>Privacy</p> 
-            </p>
+            </div>
             <p>
               Artificial Computing Machines is dedicated to research and developement in Artificial Intelligence, Machine Learning, Cyber Security, Digital Forensics and Defence Technologies. All rights Reserved.
             </p>

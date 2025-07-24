@@ -21,7 +21,7 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-6 w-full pl-7 lg:pl-16">
-            {["products", "support", "solutions", "consulting"].map((item) => (
+            {["product", "support", "solution", "consulting"].map((item) => (
               <a
                 key={item}
                 onClick={() => navigate(`/${item}`)}
@@ -45,11 +45,6 @@ const Navbar = () => {
                 size={18}
               />
             </div>
-
-            {/* Dark mode toggle removed for light mode only */}
-            {/* <div className="flex-shrink-0">
-              <ModeToggle />
-            </div> */}
           </div>
 
           {/* Hamburger Icon */}
@@ -68,18 +63,20 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden px-4 pb-4 bg-white border-t border-gray-200 transition-colors">
           <div className="flex flex-col space-y-3 pt-3">
-            {["product", "support", "solution", "about"].map((item) => (
-              <a
-                key={item}
-                onClick={() => {
-                  navigate(`/${item}`);
-                  setIsOpen(false);
-                }}
-                className="text-gray-700 hover:text-blue-900 text-[16px] py-2 border rounded-md px-3 cursor-pointer transition-colors"
-              >
-                {item.toUpperCase()}
-              </a>
-            ))}
+            {["product", "support", "solution", "about", "consulting"].map(
+              (item) => (
+                <a
+                  key={item}
+                  onClick={() => {
+                    navigate(`/${item}`);
+                    setIsOpen(false);
+                  }}
+                  className="text-gray-700 hover:text-blue-900 text-[16px] py-2 border rounded-md px-3 cursor-pointer transition-colors"
+                >
+                  {item.toUpperCase()}
+                </a>
+              )
+            )}
 
             {/* Optional Search in Mobile */}
             <div className="flex mt-3 items-center gap-2">
@@ -95,11 +92,6 @@ const Navbar = () => {
                 />
               </div>
             </div>
-
-            {/* Dark mode toggle removed here too */}
-            {/* <div className="mt-3">
-              <DarkModeToggle />
-            </div> */}
           </div>
         </div>
       )}

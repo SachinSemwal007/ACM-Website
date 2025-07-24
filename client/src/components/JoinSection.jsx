@@ -3,7 +3,7 @@ import logo from '../assets/ACM2.png';
 
 const JoinSection = () => {
   return (
-    <div className="bg-gray-100 py-15 px-10 w-[90%] sm:w-[75%] mx-auto transition-colors duration-500">
+    <div className="bg-gray-50 py-15 px-10 w-[90%] sm:w-[75%] mx-auto transition-colors duration-500">
       <div className="max-w-[70%] sm:max-w-[70%] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         {/* Left Column */}
         <div className="flex flex-col space-y-2 md:w-2/3">
@@ -24,10 +24,6 @@ const JoinSection = () => {
               alt="Company Logo"
               className="w-24 h-24 object-contain"
             />
-
-            <button className="px-5 py-2 border border-blue-600 text-blue-600 bg-transparent rounded hover:bg-blue-600 hover:text-white transition-all">
-              Join
-            </button>
           </div>
           <span className="text-xs text-gray-600">
             Empowering Innovation. Together.
