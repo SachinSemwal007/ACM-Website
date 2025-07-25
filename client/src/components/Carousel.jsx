@@ -65,9 +65,9 @@ const Carousel = () => {
 
                   {isExpanded && (
                     <div className="transform transition-all duration-500 delay-200 opacity-100">
-                      <div className="bg-black/40 rounded-sm p-4 sm:p-6">
+                      <div className="md:bg-black/40 bg-black/20 rounded-sm p-4 sm:p-6">
                         <span className="text-white text-sm sm:text-base font-medium">{slide.topic}</span>
-                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl mt-2 mb-3">{slide.title}</h2>
+                        <h2 className="text-sm sm:text-2xl md:text-3xl lg:text-3xl mt-2 mb-3">{slide.title}</h2>
                         {slide.description && (
                           <p className="text-gray-200 mb-4 sm:mb-6 leading-relaxed text-xs sm:text-sm md:text-base max-w-2xl">
                             {slide.description}

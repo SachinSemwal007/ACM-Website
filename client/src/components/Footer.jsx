@@ -46,8 +46,8 @@ const Footer = () => {
           </div>
 
           {/* Legal Section */}
-          <div className="text-xs sm:text-sm text-gray-600 space-y-2">
-            <div className="flex  justify-center lg:justify-start gap-7 font-medium">
+          <div className="text-[8px] sm:text-sm text-gray-600 sm:space-y-2 space-y-1">
+            <div className="flex  justify-center lg:justify-start sm:gap-7 gap-2 ">
               <p>© Artificial Computing Machines</p>  |
               <span>Terms of Use</span> |
               <p>Cookies</p> |

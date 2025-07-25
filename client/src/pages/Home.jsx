@@ -10,6 +10,7 @@ import Cards from '../components/Cards.jsx';
 import FutureInnovation from '../assets/CSSEC.png';
 import EmpoweringAI from '../assets/EmpoweringAI.jpg';
 import InfoSection from '../components/InfoSection.jsx';
+import SimpleMap from '../components/SimpleMap.jsx';
 
 const Home = () => {
   return (
@@ -75,10 +76,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-
-      {/* <JoinSection/> */}
         <InfoSection className="mt-6"/>
+
+        
+        <SimpleMap/>
+
         <Footer />
       </div>
     </div>
