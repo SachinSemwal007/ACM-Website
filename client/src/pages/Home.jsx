@@ -79,7 +79,7 @@ const Home = () => {
         <InfoSection className="mt-6"/>
 
         
-        <SimpleMap/>
+        {/* <SimpleMap/> */}
 
         <Footer />
       </div>

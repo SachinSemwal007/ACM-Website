@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   MapContainer,
   TileLayer,
@@ -20,18 +20,18 @@ L.Icon.Default.mergeOptions({
   shadowUrl,
 });
 
-// 👇 Helper to fly to selected marker
+// Fly to selected marker
 const FlyToLocation = ({ position, zoom }) => {
   const map = useMap();
   useEffect(() => {
     if (position) {
-      map.flyTo(position, zoom || 15, { duration: 1.5 });
+      map.flyTo(position, zoom || 5, { duration: 1.5 });
     }
   }, [position, zoom, map]);
   return null;
 };
 
-// 👇 Helper to fit map bounds on first load
+// Fit map to all markers initially
 const FitAllMarkers = ({ bounds }) => {
   const map = useMap();
   useEffect(() => {
@@ -43,81 +43,212 @@ const FitAllMarkers = ({ bounds }) => {
 };
 
 export default function SimpleMap() {
-  const locations = [
-  { lat: 23.3441, lng: 85.3096, name: "Ranchi, Jharkhand" },
-  { lat: 18.9389, lng: 72.8258, name: "Mumbai, Maharashtra" },
-  { lat: 51.4419, lng: 0.3708, name: "Gravesend, Kent, United Kingdom" }
-]
+  const data = [
+    {
+      continent: "Asia",
+      countries: [
+        {
+          name: "India",
+          locations: [
+            {
+              name: "Corporate Office (Ranchi)",
+              lat: 23.3441,
+              lng: 85.3096,
+              fulladd:
+                "Software Technology Parks of India, Namkum Industrial Area, Namkum, Ranchi - 834010, Jharkhand, India.",
+            },
+            {
+              name: "Mumbai Office",
+              lat: 18.9389,
+              lng: 72.8258,
+              fulladd:
+                "Plot-58, Laxmi Bhuvan, D Road, Wankhede Stadium, Churchgate, Mumbai - 400020, Maharashtra, India.",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      continent: "Europe",
+      countries: [
+        {
+          name: "United Kingdom",
+          locations: [
+            {
+              name: "London",
+              lat: 51.4419,
+              lng: 0.3708,
+              fulladd:
+                "138 SingleWell Road, Gravesend Kent, Da11 7px, United Kingdom.",
+            },
+          ],
+        },
+      ],
+    },
+  ];
 
+  const allLocations = data.flatMap((cont) =>
+    cont.countries.flatMap((c) => c.locations)
+  );
+  const bounds = allLocations.map((loc) => [loc.lat, loc.lng]);
 
   const [selectedPosition, setSelectedPosition] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
-  // Compute bounds from all locations
-  const bounds = locations.map((loc) => [loc.lat, loc.lng]);
+  const [openContinent, setOpenContinent] = useState(null);
+  const [openCountry, setOpenCountry] = useState(null);
+
+  const containerRef = useRef(null);
+
+  const handleLocationClick = (lat, lng, index) => {
+    setSelectedPosition([lat, lng]);
+    setSelectedIndex(index);
+  };
+
+  // Close dropdown on outside click and reset map
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (containerRef.current && !containerRef.current.contains(event.target)) {
+        setOpenCountry(null);
+        setSelectedPosition(null);
+        setSelectedIndex(null);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="flex flex-col md:flex-row  w-11/12 py-6">
-      {/* Left Column */}
-      <div className="w-full mx-auto md:w-1/4 mx-a bg-white  rounded-2xl p-6 border border-gray-100 md:rounded-r-none">
-        <div className="mb-5">
-          <h2 className="text-5xl  text-black flex items-center gap-2">
-             Our Global Presence
-          </h2>
-          <p className="text-sm text-gray-600 mt-2 leading-relaxed">
-            We're expanding worldwide! Click on a location below to zoom into that office and explore our global reach.
-          </p>
-        </div>
+    <>
+      <style>
+        {`
+          /* Remove white tile backgrounds */
+          .leaflet-tile {
+            background-color: transparent !important;
+          }
+          .leaflet-container {
+            background: transparent !important;
+          }
+        `}
+      </style>
 
-        <ul className="space-y-3 mt-4">
-          {locations.map((loc, index) => {
-            const isActive =
-              selectedPosition?.[0] === loc.lat &&
-              selectedPosition?.[1] === loc.lng;
-            return (
-              <li
-                key={index}
-                onClick={() => setSelectedPosition([loc.lat, loc.lng])}
-                className={`text-base font-medium cursor-pointer px-4 py-2 rounded-lg transition-all duration-200 ${
-                  isActive
-                    ? "bg-[#0070c0]/10 text-[#0070c0] font-semibold ring-1 ring-[#0070c0]"
-                    : "text-gray-700 hover:text-[#0070c0] hover:bg-gray-50"
-                }`}
-              >
-                 {loc.name}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-
-      {/* Right Column - Map */}
-      <div className="w-full  md:w-2/3 h-[50vh] rounded-lg overflow-hidden shadow-lg md:rounded-l-none">
-        <MapContainer
-          center={[20, 0]}
-          zoom={2}
-          style={{ height: "100%", width: "100%" }}
+      <div className="w-full max-w-7xl mx-auto px-4 py-6">
+        <div
+          ref={containerRef}
+          className="flex flex-col lg:flex-row gap-1 rounded-2xl border border-gray-100 overflow-hidden"
         >
-          {/* 👇 Fly to selected marker */}
-          {selectedPosition && (
-            <FlyToLocation position={selectedPosition} zoom={5} />
-          )}
+          {/* Left Column - Nested Dropdown */}
+          <div className="w-full lg:w-1/3 xl:w-1/4 p-4 sm:p-6 bg-[#0070c0]">
+            <div className="mb-5">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl text-center text-white font-normal">
+                Our Presence
+              </h2>
+              <hr className="w-[90%] text-white/10 mx-auto mt-2" />
+            </div>
 
-          {/* 👇 Fit all markers on initial load */}
-          {!selectedPosition && <FitAllMarkers bounds={bounds} />}
+            <ul className="space-y-3">
+              {data.map((continent, cIndex) => (
+                <li key={cIndex}>
+                  <div
+                    onClick={() =>
+                      setOpenContinent(openContinent === cIndex ? null : cIndex)
+                    }
+                    className="cursor-pointer text-lg text-white px-3 py-2 bg-[#005999]/10 rounded-md flex justify-between"
+                  >
+                    {continent.continent}
+                    <span>{openContinent === cIndex ? "▲" : "▼"}</span>
+                  </div>
+                  {openContinent === cIndex && (
+                    <ul className="ml-4 mt-2 space-y-2">
+                      {continent.countries.map((country, countryIndex) => (
+                        <li key={countryIndex}>
+                          <div
+                            onClick={() =>
+                              setOpenCountry(
+                                openCountry === `${cIndex}-${countryIndex}`
+                                  ? null
+                                  : `${cIndex}-${countryIndex}`
+                              )
+                            }
+                            className="cursor-pointer text-white text-md font-medium px-3 py-2 bg-[#006bb3]/10 rounded-md flex justify-between border-2"
+                          >
+                            {country.name}
+                            <span>
+                              {openCountry === `${cIndex}-${countryIndex}`
+                                ? "▲"
+                                : "▼"}
+                            </span>
+                          </div>
+                          {openCountry === `${cIndex}-${countryIndex}` && (
+                            <ul className="ml-4 mt-2 space-y-1 text-md">
+                              {country.locations.map((loc, locIndex) => {
+                                const indexKey = `${cIndex}-${countryIndex}-${locIndex}`;
+                                return (
+                                  <li key={locIndex}>
+                                    <div
+                                      onClick={() =>
+                                        handleLocationClick(
+                                          loc.lat,
+                                          loc.lng,
+                                          indexKey
+                                        )
+                                      }
+                                      className={`text-sm cursor-pointer px-3  py-2 border-1 rounded-lg ${
+                                        selectedIndex === indexKey
+                                          ? "bg-white text-[#0070c0] font-bold"
+                                          : "text-gray-100 hover:bg-gray-100 hover:text-[#0070c0]"
+                                      }`}
+                                    >
+                                      {loc.name}
+                                    </div>
+                                    {selectedIndex === indexKey && (
+                                      <p className="text-xs text-gray-200 mt-1 ml-3 leading-relaxed">
+                                        {loc.fulladd}
+                                      </p>
+                                    )}
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          {/* 🌐 Custom map tile layer */}
-          <TileLayer
-            attribution='&copy; <a href="https://carto.com/">CartoDB</a>'
-            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-          />
+          {/* Right Column - Map */}
+          <div className="w-full lg:w-2/3 xl:w-3/4 h-64 sm:h-80 md:h-96 lg:h-[50vh] min-h-[300px]">
+            <MapContainer
+              center={[20, 0]}
+              zoom={2}
+              style={{ height: "100%", width: "100%" }}
+            >
+              {selectedPosition && (
+                <FlyToLocation position={selectedPosition} zoom={5} />
+              )}
+              {!selectedPosition && <FitAllMarkers bounds={bounds} />}
 
-          {locations.map((loc, index) => (
-            <Marker key={index} position={[loc.lat, loc.lng]}>
-              <Popup>{loc.name}</Popup>
-            </Marker>
-          ))}
-        </MapContainer>
+              <TileLayer
+                attribution='&copy; <a href="https://carto.com/">CARTO</a>'
+                url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+              />
+
+              {allLocations.map((loc, index) => (
+                <Marker key={index} position={[loc.lat, loc.lng]}>
+                  <Popup>{loc.name}</Popup>
+                </Marker>
+              ))}
+            </MapContainer>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
