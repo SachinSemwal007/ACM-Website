@@ -13,25 +13,25 @@ const AboutAcm = () => {
 
   const initiatives = [
     {
-      title: "Cybersecurity Excellence",
+      title: "R&D Planning",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan, purus in placerat faucibus, nisi nulla laoreet nisi, at tincidunt arcu eros sed elit.",
+        "ACM R&D planning is the structured process by which we chart the course for innovative activities to meet strategic goals. It involves identifying key areas for technological advancement or product improvement, setting clear objectives, allocating resources, and establishing timelines. By proactively assessing risks and monitoring progress, we ensure that R&D efforts remain effective and adaptable, enabling us to stay competitive amid rapidly evolving market and technology landscapes.",
       image: img2,
     },
     {
-      title: "Defense & Research",
+      title: "Defense Research",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, exercitationem obcaecati rem fugit ut, autem corporis vero explicabo eveniet incidunt.",
       image: img3,
     },
     {
-      title: "AI Empowerment",
+      title: "Skill Upgradation",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
       image: img4,
     },
     {
-      title: "Future Innovation Lab",
+      title: "Industry Academia Colloboration ",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
       image: img5,
@@ -104,35 +104,35 @@ const AboutAcm = () => {
       <Navbar />
 
       {/* Header */}
-      <section className="relative bg-gradient-to-br from-[#0070c0] via-[#0056a3] to-[#003d7a] text-white py-20 px-6 text-center overflow-hidden mt-2 w-[90%] mx-auto">
+      <section className="relative bg-gradient-to-br from-[#0070c0] via-[#0056a3] to-[#003d7a] text-white py-20 px-6 text-center rounded-b-[15px] rounded-t-sm overflow-hidden mt-2 w-[90%] mx-auto">
         <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="relative z-10 max-w-4xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-1">
             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">ACM</span>
           </h1>
-          <p className="text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
-            The <strong>Artificial Computing Machines (ACM)</strong> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, impedit.
+          <p className="text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90 fo">
+             Shaping Research into life
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 text-black font-semibold">Since 2020</div>
-            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 text-black font-semibold">Fastest Growing in AI Field</div>
-            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 text-black font-semibold">Global Impact</div>
+            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 text-black font-semibold">Estd. 2020</div>
+            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 text-black font-semibold ">ISO 9001:2015, 27001:2022 Certified</div>
+            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 text-black font-semibold">CMMI Level-5</div>
           </div>
         </div>
       </section>
 
-      <main className="flex-1">
+            <main className="flex-1">
         {/* Who We Are */}
         <section className="py-20 px-6 sm:px-10 lg:px-24 bg-gradient-to-b from-gray-50 to-white">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative group">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+            <div className="relative group w-full lg:w-1/2">
               <div className="absolute -inset-4 bg-gradient-to-r from-[#0070c0] to-[#00a8ff] rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
-              <img src={img} alt="About ACM" className="relative w-full h-96 object-cover rounded-2xl shadow-2xl transform group-hover:scale-105 transition duration-300" />
+              <img src={img} alt="About ACM" className="relative w-full h-full max-h-[500px] object-contain rounded-2xl shadow-2xl transform group-hover:scale-105 transition duration-300" />
             </div>
-            <div className="space-y-6">
+            <div className="w-full lg:w-1/2 space-y-6">
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Who <span className="text-[#0070c0]">We Are</span></h2>
-              <p className="text-gray-700 text-lg leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-              <p className="text-gray-700 text-lg leading-relaxed">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+              <p className="text-gray-700 text-lg text-justify">At Artificial Computing Machines, we are committed to leading the way in cutting-edge research and development of the latest computing technologies. Whether it’s OT Security, Cybersecurity, Machine Learning, Artificial Intelligence or Defence, our goal is to provide innovative solutions that improve security, effectiveness and resilience in vital sectors across the globe. </p>
+              <p className="text-gray-700 text-lg text-justify">Our team of highly skilled engineers, scientists, and security professionals specialises in creating innovative protection technologies, intelligent threat detection systems, and automation powered by artificial intelligence. Our goal is to transform industries by combining strong cybersecurity frameworks with AI-powered insights to protect infrastructure, businesses, and national security.</p>
               <div className="flex flex-wrap gap-4 mt-8">
                 <div className="bg-gray-100 text-gray-700 px-6 py-3 rounded-full text-sm font-semibold">🌍 Global Community</div>
                 <div className="bg-gray-100 text-gray-700 px-6 py-3 rounded-full text-sm font-semibold">🚀 Innovation Focused</div>
@@ -149,7 +149,7 @@ const AboutAcm = () => {
                 Our <span className="text-[#0070c0]">Initiatives</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover the diverse projects and programs that define our commitment to technological advancement and community impact.
+                Dive into our portfolios that blends cutting-edge innovation with meaningful social change.
               </p>
             </div>
 
@@ -162,7 +162,7 @@ const AboutAcm = () => {
                   </div>
                   <div className={`space-y-6 ${idx % 2 === 1 ? "lg:col-start-1" : ""}`}>
                     <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">{initiative.title}</h3>
-                    <p className="text-gray-700 text-lg leading-relaxed">{initiative.description}</p>
+                    <p className="text-gray-700 text-lg leading-relaxed text-justify">{initiative.description}</p>
                   </div>
                 </div>
               ))}

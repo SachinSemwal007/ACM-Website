@@ -39,6 +39,8 @@ function App() {
           <Route path="/products/:category/:productName" element={<AboutProducts />} />
           <Route path="/policy" element={<PublicPolicy/>} />
           <Route path="/aboutACM" element={<AboutAcm/>} />
+          <Route path="/about-products" element={<AboutProducts />} />
+
         </Routes>
       </div>
     </BrowserRouter>
@@ -46,3 +48,5 @@ function App() {
 }
 
 export default App;
+
+

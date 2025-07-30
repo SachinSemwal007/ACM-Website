@@ -120,16 +120,6 @@ const CareersPage = () => {
     <div className="flex flex-col min-h-screen">
       {/* Navbar */}
       <Navbar />
-
-      {/* Header */}
-      {/* <section className="bg-[#0070c0] text-white text-center py-12 px-6 mt-2 w-[67%] rounded-md mx-auto">
-        <h1 className="text-4xl md:text-5xl ">We Are Hiring!</h1>
-        <p className="mt-4 text-lg max-w-2xl mx-auto">
-          Join our team and work on cutting-edge technology projects that make an
-          impact.
-        </p>
-      </section> */}
-
       <Header
         title="Start Your ACM Journey"
         description=" Join our team and work on cutting-edge technology projects that make an impact."
@@ -289,3 +279,11 @@ const CareersPage = () => {
 };
 
 export default CareersPage;
+
+
+
+
+
+
+
+

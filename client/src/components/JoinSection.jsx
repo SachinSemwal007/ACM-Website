@@ -18,7 +18,7 @@ const JoinSection = () => {
 
         {/* Right Column */}
         <div className="flex flex-col items-center md:items-end space-y-2 md:w-1/3">
-          <div className="flex items-center gap-4 ">
+          <div className="flex items-center gap-4">
             <img
               src={logo}
               alt="Company Logo"

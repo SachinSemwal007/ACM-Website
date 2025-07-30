@@ -10,7 +10,7 @@ const Footer = () => {
 
   const links = [
     { name: "Company Overview", path: "/aboutACM" },
-    { name: "Contact us", path: "/contact" },  // <-- navigate here
+    { name: "Contact us", path: "/contact" }, 
     { name: "ACM Newsroom", path: "/newsroom" },
     { name: "Careers", path: "/careers" },
     { name: "Public Policy", path: "/policy" },
@@ -72,3 +72,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
