@@ -2,9 +2,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import AboutUs from "./pages/consulting.jsx";
 import Products from "./pages/Products.jsx";
-import Solution from "./pages/Solution";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Support from "./pages/Support.jsx";
@@ -18,6 +16,7 @@ import TermsOfUse from "./pages/TermsOfUse.jsx";
 import CookiesPolicy from "./pages/CookiesPolicy.jsx";
 import Privacy from "./pages/PrivacyPolicy.jsx";
 import ScrollToTop from "./components/ui/ScrollTop.jsx";
+import AboutServices from "./pages/AboutServices.jsx";
 
 function App() {
   useEffect(() => {
@@ -38,7 +37,7 @@ function App() {
           <Route path="/consulting" element={<Consulting />} />
           <Route path="/support" element={<Support />} />
           <Route path="/product" element={<Products />} />
-          <Route path="/solution" element={<Solution />} />
+          <Route path="/about-services" element={<AboutServices/>} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/products/:category/:productName" element={<AboutProducts />} />
@@ -48,7 +47,6 @@ function App() {
           <Route path="/terms" element={<TermsOfUse/>} />
           <Route path="/cookies" element={<CookiesPolicy/>} />
           <Route path="/privacy" element={<Privacy/>} />
-
         </Routes>
       </div>
     </BrowserRouter>

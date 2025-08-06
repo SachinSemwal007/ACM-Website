@@ -29,6 +29,7 @@ const Navbar = () => {
   const [mobileDropdown, setMobileDropdown] = useState(null);
   const dropdownRef = useRef(null);
 
+  // Updated product data with description and image for each subtopic
   const productData = [
     {
       title: "Software Products",
@@ -95,72 +96,15 @@ const Navbar = () => {
     },
   ];
 
-
   const solutionData = [
-  {
-    title: "Network Security & Management",
-    description: "ACM Network Security & Management is a comprehensive process of protecting your network infrastructure, including both physical and virtual devices, from unauthorized access, cyber threats, and vulnerabilities. It involves applying security policies, using tools like firewalls, intrusion detection/prevention systems, encryption, and access controls to ensure the confidentiality, integrity, and availability of sensitive data and network resources. This centralized management approach provides the you with real-time visibility, automated policy enforcement, and faster threat detection, enabling efficient network monitoring, reduced human errors, regulatory compliance and business continuity. Ultimately, it helps safeguard critical information, streamline administration and adapt security measures to evolving cyber risks, ensuring secure and reliable network operations across all users and endpoints."
-       // image: NetworkSecurityImg,
-    // image2: NetworkSecurityHero,
-  },
-  {
-    title: "Customized Software Development",
-    description: "Customized Software Development is a specialized process of designing, developing, and deploying software solutions that are tailor-made specifically to fit your company’s unique needs, operational workflows, and business goals. Unlike generic off-the-shelf software that often requires businesses to adapt their processes to fit the tool, customized software is created with your organization’s precise requirements in mind, enabling seamless integration and optimal performance.By focusing on your company’s distinct challenges and objectives, customized software empowers your teams to work more effectively and efficiently. Whether it’s automating complex business processes, managing data in a way that aligns with your internal standards, improving communication channels, or enhancing user interaction, tailored solutions provide a competitive advantage through flexibility and scalability.The development cycle includes close collaboration with your stakeholders to thoroughly understand your workflows, industry regulations, and technical ecosystem. This ensures that the final product not only fits current needs but is also adaptable to future growth and changes in market dynamics. Moreover, custom software can be designed to integrate smoothly with your existing hardware and other software systems, reducing disruptions and accelerating adoption.Beyond functionality, customized software development prioritizes security, ensuring that sensitive business data is protected according to industry best practices and compliance standards. Ongoing support and maintenance are integral parts of the process, allowing your software to evolve alongside your company, incorporate user feedback, and respond to new challenges promptly.Investing in customized software development means choosing innovation and efficiency tailored specifically for your business. It unlocks new potential by streamlining operations, enhancing productivity, and delivering a superior user experience—all critical factors to staying competitive and agile in today’s fast-paced market."
-        // image: CustomSoftwareImg,
-    // image2: CustomSoftwareHero,
-  },
-  {
-    title: "Customized Enhancements with AI",
-    description: "Boost your systems with AI enhancements — from intelligent automation and NLP to predictive analytics and personalized user experiences. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet libero ut nisi convallis finibus. Vestibulum in sem a diam fermentum sagittis.",
-    // image: AIEnhancementImg,
-    // image2: AIEnhancementHero,
-  },
-  {
-    title: "Cyber Security & Management",
-    description: "Our cyber security services include threat detection, vulnerability assessment, penetration testing, and security audits to maintain system integrity. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet tortor malesuada laoreet at vel lacus.",
-    // image: CyberSecurityImg,
-    // image2: CyberSecurityHero,
-  },
-  {
-    title: "Operational Technology Security",
-    description: "Protect your industrial control systems and OT environments from evolving threats with our specialized OT security solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-    // image: OTImg,
-    // image2: OTHero,
-  },
-  {
-    title: "Networking Design",
-    description: "Our network design services ensure optimal connectivity, redundancy, and performance for enterprises of any scale. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula facilisis arcu, sit amet euismod enim tincidunt nec.",
-    // image: NetworkDesignImg,
-    // image2: NetworkDesignHero,
-  },
-  {
-    title: "Cert-in Certified Security Audits",
-   description: `A CERT-In Certified Security Audit is a comprehensive cybersecurity assessment performed by auditors officially empanelled by the Indian Computer Emergency Response Team (CERT-In)—the national nodal agency under MeitY. These audits are mandatory for organizations operating digital systems in India, with at least one annual risk-based, domain-specific audit required. 
-
-      The scope includes websites, applications, networks, cloud, OT, and technologies like AI and blockchain. The objective is to identify cybersecurity risks, validate regulatory compliance, and strengthen cyber resilience, following CERT-In’s structured policy guidelines.
-
-      ACM’s Key Steps in the Audit Lifecycle:
-• Scope Definition: Define assets (networks, apps, infra), type (e.g., VAPT), and roles.
-• Security Evaluation: Conduct automated and manual assessments (vuln scans, pentests, config reviews, code analysis).
-• Reporting & Remediation: Deliver detailed reports with risks, vulnerabilities, and remediation guidance, followed by re-testing.
-• Certification: Upon remediation, ACM provides CERT-In Compliance Certificates via authorized partners.
-• Continuous Improvement: Encourage sustained cybersecurity maturity and regulatory alignment.
-
-Benefits for Your Organization:
-• Demonstrates strong data protection and compliance posture.
-• Builds customer and stakeholder trust.
-• Provides competitive edge by managing cyber risks.
-• Enables proactive cyber hygiene via expert-led audits.
-
-*Note: ACM is in the process of official CERT-In empanelment. Meanwhile, certifications are delivered through accredited third-party collaborations.`
-
-        // image: CertInAuditImg,
-    // image2: CertInAuditHero,
-  },
-];
-
-
-
+    { title: "Network Security & Management" },
+    { title: "Customized Software Development" },
+    { title: "Customized Enhancements with AI" },
+    { title: "Cyber Security & Management" },
+    { title: "Opeartional Technology Security" },
+    { title: "Networking Design" },
+    { title: "Cert-in Certified Security Audits" },
+  ];
 
   const handleNavClick = (item) => {
     if (item === "product" || item === "solution") {
@@ -215,7 +159,7 @@ Benefits for Your Organization:
             </div>
           </div>
 
-          {/* Mobile Hamburger mneu */}
+          {/* Mobile Hamburger */}
           <div className="md:hidden flex-shrink-0">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -271,27 +215,20 @@ Benefits for Your Organization:
               ))}
 
             {showDropdown === "solution" &&
-                solutionData.map((solution) => (
-                  <li
-                    key={solution.title}
+              solutionData.map((solution) => (
+                <div key={solution.title} className="mb-1 py-2 w-[100%] gap-y-0">
+                  <h3
                     onClick={() => {
-                      navigate("/about-services", {
-                        state: {
-                          title: solution.title,
-                          category: "Our Services",
-                          description: solution.description,
-                          // image: solution.image,
-                          // image2: solution.image2,
-                        }
-                      });
+                      navigate(`/solutions/${solution.title.toLowerCase().replace(/\s+/g, "-")}`);
                       setShowDropdown(null);
                     }}
-                    className="text-gray-700 hover:text-[#0070c0] text-sm cursor-pointer transition-colors"
+                    className="text-[#0070c0] text-sm font-semibold cursor-pointer hover:text-black transition-colors"
                   >
                     {solution.title}
-                  </li>
-                ))}
-        </div>
+                  </h3>
+                </div>
+              ))}
+          </div>
         </div>
       )}
 
