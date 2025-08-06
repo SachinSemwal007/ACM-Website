@@ -10,13 +10,8 @@ const Consulting = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <Header
-        title="Consulting Section"
-        description="Innovative AI-powered solutions designed to streamline operations, enhance efficiency, and deliver exceptional value to your business."
-      />
 
-      {/* Hero Section */}
-      <section className="relative h-[60vh] w-full">
+      <section className="relative h-[60vh] w-full mt-1">
         <img
           src={Consultancy}
           alt="Consulting Hero"
@@ -61,7 +56,6 @@ const Consulting = () => {
         </div>
       </section>
 
-      {/* Services Offered */}
       <section className="py-12 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Our Consulting Services</h2>
@@ -88,7 +82,7 @@ const Consulting = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+
       <section className="bg-[#0070c0] text-white py-12 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">What Our Clients Say</h2>

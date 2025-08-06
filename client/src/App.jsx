@@ -17,6 +17,7 @@ import AboutAcm from "./pages/AboutAcm.jsx";
 import TermsOfUse from "./pages/TermsOfUse.jsx";
 import CookiesPolicy from "./pages/CookiesPolicy.jsx";
 import Privacy from "./pages/PrivacyPolicy.jsx";
+import ScrollToTop from "./components/ui/ScrollTop.jsx";
 
 function App() {
   useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop/>
       <div className="relative w-full min-h-screen overflow-hidden text-white">
         <Routes>
           <Route path="/" element={<Home />} />

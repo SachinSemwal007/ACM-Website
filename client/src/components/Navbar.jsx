@@ -16,7 +16,7 @@ import NextHire1 from "../assets/NextHire1.jpg"
 import BH91 from "../assets/BH91.jpg"
 import GpsAntenna from "../assets/GpsAntenna.jpg"
 import Attendance from "../assets/Attendance.jpg"
-import SmartSunGlasses from "../assets/SmartSunGlasses.jpg"
+import SmartSunGlasses from "../assets/SmartSunGlasses.png"
 
 import { useNavigate } from "react-router-dom";
 
@@ -29,7 +29,6 @@ const Navbar = () => {
   const [mobileDropdown, setMobileDropdown] = useState(null);
   const dropdownRef = useRef(null);
 
-  // Updated product data with description and image for each subtopic
   const productData = [
     {
       title: "Software Products",
@@ -159,7 +158,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Hamburger */}
+          {/* Mobile Hamburger mneu */}
           <div className="md:hidden flex-shrink-0">
             <button
               onClick={() => setIsOpen(!isOpen)}
