@@ -4,7 +4,7 @@ import Header from '../components/Header';
 
 const Products = () => {
   return (
-    <div>
+    <div >
       <Navbar />
       <Header
         title="Product's Section"

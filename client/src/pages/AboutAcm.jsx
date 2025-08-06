@@ -21,37 +21,37 @@ const AboutAcm = () => {
     {
       title: "Defense Research",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, exercitationem obcaecati rem fugit ut, autem corporis vero explicabo eveniet incidunt.",
+        "Defense research for ACM involves systematically exploring and developing technologies and solutions to address security needs and enhance national security capabilities. This strategic effort requires identifying emerging threats, investing in advanced materials, systems, or software, and collaborating with government agencies or defense clients. By prioritizing innovation and robust risk management, we engage ourselves in defense research to strengthen our competitive position, contribute to technological self-reliance, and ensure we can adapt to evolving security environments and compliance requirements.",
       image: img3,
     },
     {
       title: "Skill Upgradation",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        "Skill upgradation for ACM involves designing and implementing targeted training programs to continuously enhance the capabilities of its workforce and outsider technology enthusiasts . By assessing current skill levels and future business needs, we identify key areas where employees or candidates require development—such as new technologies, leadership skills or process improvements. Structured learning opportunities, including workshops, online/offline courses and mentorship, we not only address skill gaps but also empower to adapt to changing industry trends. This commitment to upskilling strengthens organizational agility, fosters employee engagement, and ensures sustained business growth in a dynamic market environment.",
       image: img4,
     },
     {
-      title: "Industry Academia Colloboration ",
+      title: "Industry Academia Collaboration ",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+        "Industry-academia collaboration by ACM involves actively partnering with educational institutions to advance research, spur innovation, and develop industry-ready talent. Through internships, joint research projects, curriculum development, and knowledge-sharing sessions, we leverage academic expertise and cutting-edge ideas while providing real-world perspectives and resources to universities. Such collaborations enable us and universities to address skill gaps, accelerate technology transfer, and co-create solutions to complex challenges. Moreover, these partnerships create a pipeline of skilled graduates and foster a culture of continuous learning and innovation, benefiting institutes to broader academic ecosystem.",
       image: img5,
     },
   ];
 
   const values = [
     {
-      title: "Innovation",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec leo nec lorem vestibulum convallis.",
+      title: "Result Driven",
+      desc: "Focus on achieving clear, measurable outcomes by aligning goals, emphasizing accountability, and continuously improving processes to drive performance and success",
       icon: "💡",
     },
     {
-      title: "Collaboration",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nunc sit amet tincidunt facilisis, augue dui tempor lorem.",
+      title: "Customer First",
+      desc: "Prioritize understanding and exceeding customer needs at every touchpoint, ensuring satisfaction and loyalty through exceptional service and tailored solutions.",
       icon: "🤝",
     },
     {
-      title: "Impact",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan sem at quam iaculis, a blandit justo efficitur.",
+      title: "Quality and Integrity",
+      desc: "Consistently delivering superior products or services while upholding ethical standards, transparency, and trust in every business practice.",
       icon: "🎯",
     },
   ];
@@ -173,25 +173,22 @@ const AboutAcm = () => {
         {/* Mission */}
         <section className="py-20 bg-gradient-to-br from-[#0070c0] to-[#0056a3] text-white relative overflow-hidden">
           <div className="relative max-w-5xl mx-auto text-center px-6 sm:px-10 lg:px-24">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8">Our <span className="text-yellow-400">Mission</span></h2>
-            <p className="text-xl sm:text-2xl leading-relaxed opacity-95 mb-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-1">Our <span className="text-yellow-400">Mission</span></h2>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
                 <div className="text-4xl mb-4">🎓</div>
-                <h3 className="text-xl font-semibold mb-2">Education</h3>
-                <p className="text-sm opacity-80">Fostering continuous learning and knowledge sharing</p>
+                <h3 className="text-xl font-semibold mb-2">Advance</h3>
+                <p className="text-sm opacity-80">Pushing the boundaries of the existing by conducting thorough and regress research</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl mb-4">🔬</div>
-                <h3 className="text-xl font-semibold mb-2">Research</h3>
-                <p className="text-sm opacity-80">Pushing the boundaries of computational science</p>
+                <h3 className="text-xl font-semibold mb-2">Innovate</h3>
+                <p className="text-sm opacity-80">Discovering new knowledge and applying it creatively to develop novel solutions, technologies, methods or products.</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl mb-4">🌟</div>
-                <h3 className="text-xl font-semibold mb-2">Innovation</h3>
-                <p className="text-sm opacity-80">Creating solutions for tomorrow's challenges</p>
+                <h3 className="text-xl font-semibold mb-2">Impact</h3>
+                <p className="text-sm opacity-80">Tangible benifits that research outcomes brings to society, the Economy, or the Enviroment</p>
               </div>
             </div>
           </div>
@@ -201,12 +198,9 @@ const AboutAcm = () => {
         <section className="py-20 bg-white" ref={cardRef}>
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-1">
                 Our <span className="text-[#0070c0]">Values</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                The principles that guide our work and define our community culture.
-              </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">

@@ -11,7 +11,6 @@ const Footer = () => {
   const links = [
     { name: "Company Overview", path: "/aboutACM" },
     { name: "Contact us", path: "/contact" }, 
-    { name: "ACM Newsroom", path: "/newsroom" },
     { name: "Careers", path: "/careers" },
     { name: "Public Policy", path: "/policy" },
   ];
@@ -46,18 +45,54 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex justify-center lg:justify-start items-center gap-4 mt-2">
-            <FaFacebook className="text-gray-700 text-[17px] sm:text-[22px] hover:text-blue-600" />
-            <BsTwitterX className="text-gray-700 text-[17px] sm:text-[22px] hover:text-black" />
-            <SiLinkedin className="text-gray-700 text-[17px] sm:text-[22px] hover:text-blue-900" />
+            <a
+              href="https://x.com/AcmltdIndia"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <BsTwitterX className="text-gray-700 text-[17px] sm:text-[22px] hover:text-black" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/75619230/admin/dashboard/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <SiLinkedin className="text-gray-700 text-[17px] sm:text-[22px] hover:text-blue-900" />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100089490903737"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebook className="text-gray-700 text-[17px] sm:text-[22px] hover:text-blue-600" />
+            </a>
           </div>
 
           {/* Legal Section */}
           <div className="text-[8px] sm:text-sm text-gray-900 sm:space-y-2 space-y-1">
-            <div className="flex justify-center lg:justify-start sm:gap-7 gap-2">
+            <div className="flex justify-center lg:justify-start sm:gap-7 gap-2 flex-wrap text-sm">
               <p>© Artificial Computing Machines</p> |
-              <span>Terms of Use</span> |
-              <p>Cookies</p> |
-              <p>Privacy</p>
+              <button
+                onClick={() => navigate("/terms")}
+                className="hover:underline hover:text-blue-600"
+              >
+                Terms of Use
+              </button> |
+              <button
+                onClick={() => navigate("/cookies")}
+                className="hover:underline hover:text-blue-600"
+              >
+                Cookies
+              </button> |
+              <button
+                onClick={() => navigate("/privacy")}
+                className="hover:underline hover:text-blue-600"
+              >
+                Privacy
+              </button>
             </div>
             <p>
               Artificial Computing Machines is dedicated to research and development
@@ -72,7 +107,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
-

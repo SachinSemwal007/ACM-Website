@@ -14,6 +14,9 @@ import CareersPage from "./pages/Careers.jsx";
 import AboutProducts from "./pages/AboutProducts.jsx"; 
 import PublicPolicy from "./pages/PublilcPolicy.jsx";
 import AboutAcm from "./pages/AboutAcm.jsx";
+import TermsOfUse from "./pages/TermsOfUse.jsx";
+import CookiesPolicy from "./pages/CookiesPolicy.jsx";
+import Privacy from "./pages/PrivacyPolicy.jsx";
 
 function App() {
   useEffect(() => {
@@ -40,6 +43,9 @@ function App() {
           <Route path="/policy" element={<PublicPolicy/>} />
           <Route path="/aboutACM" element={<AboutAcm/>} />
           <Route path="/about-products" element={<AboutProducts />} />
+          <Route path="/terms" element={<TermsOfUse/>} />
+          <Route path="/cookies" element={<CookiesPolicy/>} />
+          <Route path="/privacy" element={<Privacy/>} />
 
         </Routes>
       </div>

@@ -69,9 +69,6 @@ const ContactUs = () => {
               <h2 className="text-2xl sm:text-3xl lg:text-4xl  text-gray-800 mb-6">
                 Connect with us
               </h2>
-              {/* <p className="text-gray-600 text-base sm:text-lg mb-8">
-                Have questions about our services or want to work with us? Reach out via phone, email, or by visiting our office.
-              </p> */}
             </div>
 
             {/* Contact Details */}
@@ -103,21 +100,21 @@ const ContactUs = () => {
               <p className="text-gray-600 mb-4 font-medium">Get with us on social media</p>
               <div className="flex gap-4">
                 <a 
-                  href="#" 
+                  href="https://www.facebook.com/profile.php?id=100089490903737" 
                   className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                   aria-label="Facebook"
                 >
                   <FaFacebook className="text-sm" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://x.com/AcmltdIndia" 
                   className="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-black transition-colors"
                   aria-label="Twitter"
                 >
                   <BsTwitterX className="text-sm" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/company/75619230/admin/dashboard/" 
                   className="w-10 h-10 bg-blue-700 text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors"
                   aria-label="LinkedIn"
                 >
