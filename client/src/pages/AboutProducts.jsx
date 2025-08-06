@@ -7,7 +7,7 @@ const AboutProducts = () => {
   const { category, productName } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-  const { title, description, image,image2} = location.state || {};
+  const { title, description,image2} = location.state || {};
 
   const displayTitle = title || productName?.replace(/-/g, " ");
   const displayCategory = category?.replace(/-/g, " ");
@@ -23,7 +23,7 @@ const AboutProducts = () => {
           <div className="aspect-[16/9] sm:aspect-[21/9] lg:aspect-[5/2] overflow-hidden">
             <img
               src={image2}
-              alt={displayTitle || "Service Overview"}
+              // alt={displayTitle || "Service Overview"}
               className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 ease-out"
             />
           </div>
@@ -74,15 +74,6 @@ const AboutProducts = () => {
               )}
             </div>
           </div>
-          
-          
-          <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div className="bg-white/20 backdrop-blur-sm rounded-full p-2">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-              </svg>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -97,14 +88,6 @@ const AboutProducts = () => {
               <div className="flex flex-col">
                 
                 <div className="w-full relative group">
-                  <div className="aspect-[16/9] sm:aspect-[2/1] md:aspect-[5/2] overflow-hidden">
-                    <img
-                      src={image || "/images/placeholder.png"}
-                      alt={displayTitle}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 
@@ -113,9 +96,9 @@ const AboutProducts = () => {
                     <div className="flex-1 space-y-6">
 
                       <div className="text-center sm:text-left">
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 leading-tight">
+                        {/* <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 leading-tight">
                           {displayTitle}
-                        </h2>
+                        </h2> */}
                         {displayCategory && (
                           <div className="flex justify-center sm:justify-start mt-3">
                             <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">

@@ -6,10 +6,10 @@ import Navbar from "../components/Navbar";
 const AboutServices = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { title, description, image, image2, category } = location.state || {};
+  const { title, description,image2 } = location.state || {};
 
   const displayTitle = title || "Service Title";
-  const displayCategory = category || "Our Services";
+//   const displayCategory = category || "";
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
@@ -43,22 +43,10 @@ const AboutServices = () => {
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
             <div className="flex flex-col">
               <div className="w-full relative group">
-                <div className="aspect-[16/9] sm:aspect-[2/1] md:aspect-[5/2] overflow-hidden">
-                  <img
-                    src={image || "/images/placeholder.png"}
-                    alt={displayTitle}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+                
               </div>
               <div className="p-6 sm:p-8 lg:p-12">
                 <div className="space-y-6">
-                  <h2 className="text-3xl font-bold text-gray-900">{displayTitle}</h2>
-                  {displayCategory && (
-                    <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
-                      {displayCategory}
-                    </span>
-                  )}
                   <p className="text-gray-700 text-lg leading-relaxed whitespace-pre-line">
                     {description || "No service description available."}
                   </p>
