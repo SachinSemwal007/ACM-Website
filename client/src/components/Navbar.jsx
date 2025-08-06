@@ -19,8 +19,7 @@ import Attendance from "../assets/Attendance.jpg"
 import SmartSunGlasses from "../assets/SmartSunGlasses.png"
 
 import { useNavigate } from "react-router-dom";
-
-
+import ReactMarkdown from "react-markdown";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -190,20 +189,20 @@ Implementing a thoughtfully designed network infrastructure empowers your compan
 
 The scope includes websites, applications, networks, cloud, OT, and technologies like AI and blockchain. The objective is to identify cybersecurity risks, validate regulatory compliance, and strengthen cyber resilience, following CERT-In’s structured policy guidelines.
 
-**ACM’s Key Steps in the Audit Lifecycle:**
+ACM’s Key Steps in the Audit Lifecycle:
 • Scope Definition: Define assets (networks, apps, infra), type (e.g., VAPT), and roles.
 • Security Evaluation: Conduct automated and manual assessments (vuln scans, pentests, config reviews, code analysis).
 • Reporting & Remediation: Deliver detailed reports with risks, vulnerabilities, and remediation guidance, followed by re-testing.
 • Certification: Upon remediation, ACM provides CERT-In Compliance Certificates through authorized partners.
 • Continuous Improvement: Encourage sustained cybersecurity maturity and regulatory alignment.
 
-**Benefits for Your Organization:**
+Benefits for Your Organization:
 • Demonstrates strong data protection and compliance posture.
 • Builds customer and stakeholder trust.
 • Provides competitive edge by managing cyber risks.
 • Enables proactive cyber hygiene via expert-led audits.
 
-*Note : ACM is in the process of official CERT-In empanelment. Meanwhile, certifications are delivered through certified collaborations._`
+Note : ACM is in the process of official CERT-In empanelment. Meanwhile, certifications are delivered through certified collaborations._`
 
         // image: CertInAuditImg,
     // image2: CertInAuditHero,
