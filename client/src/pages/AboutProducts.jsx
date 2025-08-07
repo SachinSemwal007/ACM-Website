@@ -1,193 +1,89 @@
-import React from "react";
-import { useLocation, useParams, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 const AboutProducts = () => {
-  const { category, productName } = useParams();
   const location = useLocation();
-  const navigate = useNavigate();
-  const { title, description,image2} = location.state || {};
+  const { title, description, image2 } = location.state || {};
 
-  const displayTitle = title || productName?.replace(/-/g, " ");
-  const displayCategory = category?.replace(/-/g, " ");
+  const displayTitle = title || "Service Title";
+
+  // Split description into paragraphs for better formatting
+  const paragraphs = description?.split('\n\n') || ["No service description available."];
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
       <Navbar />
-      
-      {/* Hero Image Section */}
+
+      {/* Hero Section */}
       <div className="w-[90%] mx-auto mt-4 mb-8">
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-          {/* Hero Image */}
-          <div className="aspect-[16/9] sm:aspect-[21/9] lg:aspect-[5/2] overflow-hidden">
+        <div className="relative rounded-md overflow-hidden shadow-2xl group">
+          <div className="aspect-[16/9] sm:aspect-[21/9] lg:aspect-[5/2] ">
             <img
               src={image2}
-              // alt={displayTitle || "Service Overview"}
-              className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 ease-out"
+              alt={displayTitle}
+              className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out"
             />
           </div>
-          
-          
-          <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300"></div>
-          
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500" />
           
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white px-6 sm:px-8 lg:px-12 max-w-4xl">
-          
-              {displayCategory && (
-                <nav className="flex justify-center mb-4 sm:mb-6">
-                  <ol className="flex items-center space-x-2 text-sm text-white/80">
-                    <li><span className="hover:text-white transition-colors cursor-pointer">Home</span></li>
-                    <li className="flex items-center">
-                      <svg className="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
-                      </svg>
-                      <span className="text-white">{displayCategory}</span>
-                    </li>
-                  </ol>
-                </nav>
-              )}
-              
-          
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight transform group-hover:scale-105 transition-transform duration-300">
-                {displayTitle || "Digital Service Platform"}
+            <div className="text-center text-white px-6 max-w-4xl transform group-hover:scale-105 transition-transform duration-500">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white text-shadow-sm text-shadow-black drop-shadow-2xl">
+                {displayTitle}
               </h1>
-              
-          
-              <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-6 transform group-hover:translate-y-1 transition-transform duration-300">
-                {description ? 
-                  description.slice(0, 180) + (description.length > 180 ? "..." : "")
-                  : 
-                  "Streamlined digital services designed to enhance efficiency and provide seamless user experience for modern administrative needs."
-                }
-              </p>
-              
-          
-              {displayCategory && (
-                <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 sm:px-6 sm:py-3 border border-white/30">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                  </svg>
-                  <span className="text-sm sm:text-base font-medium text-white">{displayCategory}</span>
-                </div>
-              )}
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-900 to-indigo-500 mx-auto rounded-full"></div>
             </div>
           </div>
         </div>
       </div>
 
-
-      <h1 className="text-5xl text-center text-black font-semibold mt-12"
-      >About The Product</h1>
- 
-      <main className="flex-1 py-12 px-4 sm:px-6 lg:px-8">
+      {/* About Service Details */}
+      <main className="flex-1 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          {displayTitle ? (
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-              <div className="flex flex-col">
-                
-                <div className="w-full relative group">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                
-                <div className="p-6 sm:p-8 lg:p-12">
-                  <div className="flex flex-col h-full">
-                    <div className="flex-1 space-y-6">
+          {/* Main Content Card */}
+          <div className="bg-white/80 backdrop-blur-sm rounded-md shadow-2xl overflow-hidden border border-white/50 hover:shadow-3xl transition-all duration-500 relative">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-white to-black rotate-45 -translate-y-20 translate-x-20 opacity-50"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-white to-black rotate-45 translate-y-16 -translate-x-16 opacity-50"></div>
+            
+            <div className="relative z-10 p-8 sm:p-12 lg:p-16">
+              {/* Section Header */}
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                  About The Product
+                </h2>
+                <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+              </div>
 
-                      <div className="text-center sm:text-left">
-                        {/* <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 leading-tight">
-                          {displayTitle}
-                        </h2> */}
-                        {displayCategory && (
-                          <div className="flex justify-center sm:justify-start mt-3">
-                            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                              {displayCategory}
-                            </span>
-                          </div>
-                        )}
-                      </div>
+              {/* Content Grid */}
+              <div className="grid gap-4 lg:gap-4">
+                {paragraphs.map((paragraph, index) => (
+                  <div 
+                    key={index}
+                    className="group relative"
+                  >
+                    {/* Paragraph with enhanced styling */}
+                    <div className="relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300">
+                      {/* Accent line */}
+                      <div className="absolute left-0 top-6 bottom-6 w-1 bg-gradient-to-b from-blue-400 via-indigo-500 to-purple-500 rounded-full group-hover:w-2 transition-all duration-300"></div>
                       
-                      <div className="prose prose-lg prose-gray max-w-none">
-                        <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-[#0070c0]">
-                          <p className="text-gray-700 text-base sm:text-lg leading-relaxed whitespace-pre-line m-0">
-                            {description || "Description not available."}
-                          </p>
-                        </div>
+                      {/* Content */}
+                      <div className="sm:pl-6 pl-0">
+                        <p className="text-gray-700 md:text-lg leading-relaxed font-light tracking-wide whitespace-pre-line text-[13px] text-justify">
+                          {paragraph.trim()}
+                        </p>
                       </div>
-                      
-                    </div>
-                    <div className="mt-8 pt-6 border-t border-gray-200 text-center sm:text-left">
-                      <button
-                        onClick={() => navigate(-1)}
-                        className="inline-flex items-center px-8 py-3 bg-[#0070c0] text-white font-semibold rounded-lg hover:bg-[#005a9f] focus:outline-none focus:ring-4 focus:ring-blue-200 transform hover:scale-105 transition-all duration-200 shadow-lg"
-                      >
-                        <svg
-                          className="w-5 h-5 mr-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                          />
-                        </svg>
-                        Back to Services
-                      </button>
+
+                      {/* Decorative corner */}
+                      <div className="absolute top-4 right-4 w-3 h-3 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-60"></div>
                     </div>
                   </div>
-                </div>
+                ))}
+
               </div>
             </div>
-          ) : (
-            <div className="bg-white rounded-2xl shadow-lg p-12 text-center border border-gray-200">
-              <div className="max-w-md mx-auto">
-                <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg 
-                    className="w-10 h-10 text-gray-400" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={1.5} 
-                      d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" 
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  No Service Details Found
-                </h3>
-                <p className="text-gray-600 mb-8 leading-relaxed">
-                  The service information could not be loaded. Please try again or contact support if the issue persists.
-                </p>
-                <button
-                  onClick={() => navigate(-1)}
-                  className="inline-flex items-center px-8 py-3 bg-[#0070c0] text-white font-semibold rounded-lg hover:bg-[#005a9f] focus:outline-none focus:ring-4 focus:ring-blue-200 transform hover:scale-105 transition-all duration-200 shadow-lg"
-                >
-                  <svg 
-                    className="w-5 h-5 mr-2" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M10 19l-7-7m0 0l7-7m-7 7h18" 
-                    />
-                  </svg>
-                  Back to Services
-                </button>
-              </div>
-            </div>
-          )}
+          </div>
         </div>
       </main>
 

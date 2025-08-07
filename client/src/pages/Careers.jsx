@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
-import JoinSection from "../components/JoinSection";
+
 const CareersPage = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedWorkMode, setSelectedWorkMode] = useState("");
   const [selectedExperience, setSelectedExperience] = useState("");
-  const [openDropdown, setOpenDropdown] = useState(null); // to control dropdown expand/collapse
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const jobs = [
     {
       title: "Python ML Developer",
-      category: "Machine Learning",
+      category: "AI/ML Engineers",
       workMode: "Office",
       experience: "2-5",
       location: "Ranchi, Jharkhand",
@@ -23,7 +24,7 @@ const CareersPage = () => {
     },
     {
       title: "Frontend Developer",
-      category: "Full Stack",
+      category: "Full Stack Developers",
       workMode: "Hybrid",
       experience: "0-2",
       location: "Mumbai, Maharashtra",
@@ -33,7 +34,7 @@ const CareersPage = () => {
     },
     {
       title: "Data Analyst",
-      category: "Analytics",
+      category: "Data Analyst",
       workMode: "WFH",
       experience: "2-5",
       location: "Remote",
@@ -43,7 +44,7 @@ const CareersPage = () => {
     },
     {
       title: "Ethical Hacker",
-      category: "Cyber Security",
+      category: "Cyber Security Analyst",
       workMode: "Office",
       experience: "5-7",
       location: "Delhi",
@@ -61,11 +62,11 @@ const CareersPage = () => {
       description:
         "Manage hiring, employee relations, and organizational development for growing teams.",
     },
-     {
-      title: "Python ML Developer",
-      category: "Machine Learning",
+    {
+      title: "R Developer",
+      category: "AI/ML Engineers",
       workMode: "Office",
-      experience: "2-5",
+      experience: "3-5",
       location: "Ranchi, Jharkhand",
       type: "Full-Time",
       description:
@@ -74,11 +75,16 @@ const CareersPage = () => {
   ];
 
   const categories = [
-    "Machine Learning",
-    "Full Stack",
-    "Analytics",
-    "Cyber Security",
+    "AI/ML Engineers",
+    "Full Stack Developers",
+    "Data Analyst",
+    "Cyber Security Analyst",
     "Human Resources",
+    "Embeded System Design",
+    "Ethical Hacker",
+    "Quality Assurance Engineer",
+    "OT Security Architects",
+    "Manual / Automation Tester"
   ];
 
   const workModes = ["Office", "WFH", "Hybrid"];
@@ -99,11 +105,11 @@ const CareersPage = () => {
   };
 
   const handleWorkModeChange = (value) => {
-    setSelectedWorkMode(selectedWorkMode === value ? "" : value); // only one selection
+    setSelectedWorkMode(selectedWorkMode === value ? "" : value);
   };
 
   const handleExperienceChange = (value) => {
-    setSelectedExperience(selectedExperience === value ? "" : value); // only one selection
+    setSelectedExperience(selectedExperience === value ? "" : value);
   };
 
   const filteredJobs = jobs.filter((job) => {
@@ -113,23 +119,28 @@ const CareersPage = () => {
       !selectedWorkMode || job.workMode === selectedWorkMode;
     const experienceMatch =
       !selectedExperience || job.experience === selectedExperience;
-    return categoryMatch && workModeMatch && experienceMatch;
+    const searchMatch =
+      searchTerm.trim() === "" || job.title.toLowerCase().includes(searchTerm.toLowerCase());
+
+    return categoryMatch && workModeMatch && experienceMatch && searchMatch;
   });
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
       <Navbar />
       <Header
         title="Start Your ACM Journey"
-        description=" Join our team and work on cutting-edge technology projects that make an impact."
+        description="Join our team and work on cutting-edge technology projects that make an impact."
       />
 
       {/* Main Section */}
       <section className="flex-1 max-w-7xl mx-auto py-16 px-2 w-full flex flex-col md:flex-row gap-8">
+        {/* Sidebar Filters */}
         <aside className="w-full md:w-1/4 bg-white p-6 rounded-xl shadow border border-gray-200">
           <div className="bg-[#0070c0]/80 rounded-md">
-            <h3 className="text-lg font-semibold mb-4 text-center my-auto text-white p-2 ">Filter Jobs</h3>
+            <h3 className="text-lg font-semibold mb-4 text-center my-auto text-white p-2">
+              Filter Jobs
+            </h3>
           </div>
 
           {/* Category Filter */}
@@ -216,6 +227,7 @@ const CareersPage = () => {
               setSelectedCategories([]);
               setSelectedWorkMode("");
               setSelectedExperience("");
+              setSearchTerm("");
             }}
             className="w-full bg-gray-200 text-black py-2 px-4 rounded-md hover:bg-gray-300 transition"
           >
@@ -223,67 +235,75 @@ const CareersPage = () => {
           </button>
         </aside>
 
-
         {/* Job Listings */}
         <div className="flex-1">
-          {/* <h2 className="text-3xl font-bold text-center mb-8 text-black">Open Positions</h2> */}
+          {/* Search Input */}
+          <div className="mb-6 w-full flex justify-end">
+            <input
+              type="text"
+              placeholder="Search job title..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="  px-4 py-2 text-black border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-[#0070c0]"
+            />
+          </div>
 
-          {filteredJobs.length === 0 ? (
-            <p className="text-center text-gray-600">No jobs available in selected filters.</p>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredJobs.map((job, index) => (
-                <div
-                  key={index}
-                  className="bg-white border border-gray-200 rounded-xl p-6 shadow hover:shadow-lg transition flex flex-col"
-                >
-                  <h3 className="text-sm  text-black text-start">{job.title}</h3>
-                  <p
-                    className={`text-gray-600 mt-2 text-sm cursor-default transition-all duration-300 ${
-                      expandedIndex === index
-                        ? ""
-                        : "overflow-hidden text-ellipsis line-clamp-3"
-                    }`}
+          {(searchTerm || selectedCategories.length || selectedWorkMode || selectedExperience) ? (
+            filteredJobs.length === 0 ? (
+              <p className="text-center text-gray-600">
+                No jobs available in selected filters.
+              </p>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredJobs.map((job, index) => (
+                  <div
+                    key={index}
+                    className="bg-white border border-gray-200 rounded-xl p-6 shadow hover:shadow-lg transition flex flex-col"
                   >
-                    {job.description}
-                  </p>
-                  <button
-                    onClick={() => toggleExpand(index)}
-                    className="text-[#0070c0] mt-1 text-sm font-medium hover:underline self-start"
-                  >
-                    {expandedIndex === index ? "Show less" : "Click to know more"}
-                  </button>
-                  <div className="mt-4 text-sm text-gray-500">
-                    <p>📍 {job.location}</p>
-                    <p>💼 {job.type} | {job.workMode}</p>
-                    <p>🧑‍💻 Experience: {job.experience} years</p>
-                  </div>
-                  <div className="mt-auto">
-                    <button
-                      onClick={() => alert("Application form coming soon!")}
-                      className="mt-6 w-full bg-[#0070c0] text-white py-2 px-4 rounded-md hover:bg-blue-800 transition"
+                    <h3 className="text-sm text-black text-start">{job.title}</h3>
+                    <p
+                      className={`text-gray-600 mt-2 text-sm cursor-default transition-all duration-300 ${
+                        expandedIndex === index
+                          ? ""
+                          : "overflow-hidden text-ellipsis line-clamp-3"
+                      }`}
                     >
-                      Apply Now
+                      {job.description}
+                    </p>
+                    <button
+                      onClick={() => toggleExpand(index)}
+                      className="text-[#0070c0] mt-1 text-sm font-medium hover:underline self-start"
+                    >
+                      {expandedIndex === index ? "Show less" : "Click to know more"}
                     </button>
+                    <div className="mt-4 text-sm text-gray-500">
+                      {/* <p>📍 {job.location}</p> */}
+                      <p>💼 {job.type} | {job.workMode}</p>
+                      <p>🧑‍💻 Experience: {job.experience} years</p>
+                    </div>
+                    {/* <div className="mt-auto">
+                      <button
+                        onClick={() => alert("Application form coming soon!")}
+                        className="mt-6 w-full bg-[#0070c0] text-white py-2 px-4 rounded-md hover:bg-blue-800 transition"
+                      >
+                        Apply Now
+                      </button>
+                    </div> */}
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )
+          ) : (
+            <p className="text-center text-gray-400 italic">
+              Thankyou for your interest, But there are currently no open positions at ACM
+            </p>
           )}
         </div>
-     
       </section>
+
       <Footer />
     </div>
   );
 };
 
 export default CareersPage;
-
-
-
-
-
-
-
-

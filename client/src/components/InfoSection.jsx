@@ -16,7 +16,7 @@ const InfoSection = () => {
       title: "Our Innovations",
       description:
         "Seek what lies ahead in technology as you visit the ACM Lab.",
-      link: "/innovations",
+      link: "/consulting",
       tag: "ACM Research →",
     },
     {

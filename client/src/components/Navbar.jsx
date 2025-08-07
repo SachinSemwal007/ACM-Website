@@ -18,6 +18,17 @@ import GpsAntenna from "../assets/GpsAntenna.jpg"
 import Attendance from "../assets/Attendance.jpg"
 import SmartSunGlasses from "../assets/SmartSunGlasses.png"
 
+
+// solutions images
+
+import certin from "../assets/certin.png"
+import CyberSecuritycopy from '../assets/CSSEC.jpg'
+import NetworkDesign from "../assets/NetworkDesign.jpg"
+import NetworkInfra from "../assets/networkInfra.jpg"
+import SoftwareDevelopment from "../assets/SoftwareDevelopment.jpg"
+import EmpoweringAI from "../assets/EmpoweringAI.jpg"
+import OTSEC3 from "../assets/OTSEC3.jpg"
+
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
@@ -52,7 +63,7 @@ const Navbar = () => {
         },
         {
           title: "Nexthire",
-          description: "Nexthire is an AI-powered recruitment platform that streamlines the entire hiring lifecycle using intelligent automation, resume parsing, and predictive candidate matching. It enhances talent acquisition by reducing time-to-hire, minimizing bias, and improving candidate experience through data-driven insights, workflow optimization, and seamless integration with existing HR systems.",
+          description: "Nexthire is a software platform that automates and streamlines the entire hiring process, allowing organizations to efficiently manage job postings, candidate applications, interview scheduling, and onboarding from a central digital workspace. Key features typically include applicant tracking, automated communication and analytics to monitor recruitment effectiveness. By minimizing manual tasks and integrating with various job boards and HR systems, Nexthire not only saves organizations time and reduces operational costs but also improves the candidate experience through timely updates and a smoother application process.",
           image: IntelligentHiring,
           image2: NextHire1,
         },
@@ -96,12 +107,13 @@ const Navbar = () => {
 
 
   const solutionData = [
+
   {
     title: "Network Security & Management",
-    description: "ACM Network Security & Management is a comprehensive process of protecting your network infrastructure, including both physical and virtual devices, from unauthorized access, cyber threats, and vulnerabilities. It involves applying security policies, using tools like firewalls, intrusion detection/prevention systems, encryption, and access controls to ensure the confidentiality, integrity, and availability of sensitive data and network resources. This centralized management approach provides the you with real-time visibility, automated policy enforcement, and faster threat detection, enabling efficient network monitoring, reduced human errors, regulatory compliance and business continuity. Ultimately, it helps safeguard critical information, streamline administration and adapt security measures to evolving cyber risks, ensuring secure and reliable network operations across all users and endpoints."
-       // image: NetworkSecurityImg,
-    // image2: NetworkSecurityHero,
+    description: "ACM Network Security & Management is a comprehensive process of protecting your network infrastructure, including both physical and virtual devices, from unauthorized access, cyber threats, and vulnerabilities. It involves applying security policies, using tools like firewalls, intrusion detection/prevention systems, encryption, and access controls to ensure the confidentiality, integrity, and availability of sensitive data and network resources. This centralized management approach provides the you with real-time visibility, automated policy enforcement, and faster threat detection, enabling efficient network monitoring, reduced human errors, regulatory compliance and business continuity. Ultimately, it helps safeguard critical information, streamline administration and adapt security measures to evolving cyber risks, ensuring secure and reliable network operations across all users and endpoints.",
+    image2: NetworkInfra,
   },
+
   {
     title: "Customized Software Development",
     description: `Customized Software Development is a specialized process of designing, developing, and deploying software solutions that are tailor-made specifically to fit your company’s unique needs, operational workflows, and business goals. Unlike generic off-the-shelf software that often requires businesses to adapt their processes to fit the tool, customized software is created with your organization’s precise requirements in mind, enabling seamless integration and optimal performance.
@@ -113,8 +125,8 @@ The development cycle includes close collaboration with your stakeholders to tho
 Beyond functionality, customized software development prioritizes security, ensuring that sensitive business data is protected according to industry best practices and compliance standards. Ongoing support and maintenance are integral parts of the process, allowing your software to evolve alongside your company, incorporate user feedback, and respond to new challenges promptly.
 
 Investing in customized software development means choosing innovation and efficiency tailored specifically for your business. It unlocks new potential by streamlining operations, enhancing productivity, and delivering a superior user experience—all critical factors to staying competitive and agile in today’s fast-paced market.
-`// image: CustomSoftwareImg,
-    // image2: CustomSoftwareHero,
+`,
+    image2:SoftwareDevelopment,
   },
   {
     title: "Customized Enhancements with AI",
@@ -123,39 +135,30 @@ ACM helps you in designing and integrating artificial intelligence solutions uni
 With AI-powered customization, your business can automate routine processes, analyze large datasets for actionable insights and deliver highly personalized user experiences. Whether it's through intelligent chatbots, dynamic recommendation engines, predictive analytics or workflow automation, AI drives operational excellence and creates new avenues for innovation and growth. These solutions are developed collaboratively with your to understand your current systems, future vision and compliance requirements—ensuring seamless integration and safeguarding sensitive data within your secure environment.
 Custom AI not only boosts productivity by streamlining repetitive tasks, but it also adapts and scales alongside your business. As your operations evolve, these solutions can be retrained and extended to accommodate new data, trends and business priorities. Advanced features like real-time decision-making, automated A/B testing and tailored customer engagement help your company optimize resources and make smarter, faster decisions based on real-time insights.
 Importantly, a customized approach to AI provides you with full control and ownership over your data, which is essential for meeting regulatory requirements and maintaining user privacy. By embedding AI into your IT ecosystem, your future-proof your business, staying agile and ready to seize emerging opportunities in a fast-changing digital landscape.
+
 Key Benefits of Customized AI Enhancement:
 • Solutions precisely aligned with your business objectives and KPIs.
 • Automated workflows that reduce manual effort and costs while improving operational speed and accuracy.
 • Personalization at scale—for both customer-facing experiences and internal processes.
 • Robust data privacy and seamless integration into existing systems.
 • Scalable, flexible architecture that grows alongside your company’s needs.
-• Proprietary AI that delivers differentiation and isn’t easily replicable by competitors.
-
-` // image: AIEnhancementImg,
-    // image2: AIEnhancementHero,
+• Proprietary AI that delivers differentiation and isn’t easily replicable by competitors.`,
+    image2: EmpoweringAI,
   },
   {
     title: "Cyber Security & Management",
     description:`
 Cyber Security & Management is the strategic and systematic approach your company takes to protect its digital infrastructure, sensitive data, and information systems from unauthorized access, cyber threats, and potential breaches. It combines advanced technologies, robust policies, proactive risk management, and continuous monitoring to ensure the confidentiality, integrity, and availability of your business-critical assets.
-
 In today’s interconnected and digital business environment, cyber threats such as malware, ransomware, phishing, insider threats, and sophisticated cyberattacks pose a significant risk to companies of all sizes. Effective cybersecurity management addresses these risks by implementing a comprehensive defense strategy that includes firewalls, intrusion detection and prevention systems, encryption, identity and access controls, vulnerability management, and incident response plans.
 
 Cybersecurity management is not just about technology — it involves governance, employee awareness, and compliance with legal and regulatory requirements to create a security-conscious culture throughout the organization. It requires ongoing assessment of security posture, rapid detection and mitigation of vulnerabilities, and a clear assignment of responsibility among the security team and leadership.
-
 By investing in cyber security management, your company ensures business continuity even in the face of cyber incidents, protects intellectual property and customer data, builds trust with stakeholders, and meets industry standards. Furthermore, it enables your business to adapt quickly to evolving cyber risks and complex regulatory landscapes, maintaining a strong security posture in a dynamic threat environment.
-
 Key benefits include minimized financial losses from cyberattacks, reduced operational disruptions, improved regulatory compliance, proactive risk identification, and fostering a resilient organizational culture that prioritizes security at every level.
 
 In summary, cyber security and management safeguard your company’s digital assets and reputation, delivering a secure and reliable operational foundation necessary for sustainable growth and competitive advantage.
-
 If you would like, I can also help you create a shorter summary or a more technical version for your website.
-
-This definition is synthesized from trusted sources describing corporate cybersecurity management frameworks and practices.
-
-`
-      // image: CyberSecurityImg,
-    // image2: CyberSecurityHero,
+This definition is synthesized from trusted sources describing corporate cybersecurity management frameworks and practices.`,
+    image2: CyberSecuritycopy,
   },
 
 
@@ -164,11 +167,11 @@ This definition is synthesized from trusted sources describing corporate cyberse
     description: `
  Operational Technology (OT) Security is the comprehensive protection of your company’s industrial networks, systems, and physical devices that control or monitor critical processes—such as manufacturing lines, power grids, transportation systems, and facility management. Unlike traditional IT environments focused on data and communication infrastructure, OT environments involve direct interaction with machinery and production assets, making their security vital for both digital safety and operational continuity.
 Modern industrial environments are increasingly connected, bridging the gap between legacy control systems and advanced digital technologies. This connectivity has improved efficiency and insight, but it has also exposed OT systems to cyber threats that can disrupt operations, endanger safety, and cause significant financial losses. OT Security addresses these risks by implementing a layered defense strategy that includes network segmentation, real-time monitoring, vulnerability assessments, access controls, robust authentication mechanisms, and specialized incident response plans tailored to industrial settings.
+
 A robust OT security framework ensures that control systems such as SCADA, PLCs, and DCS are continuously monitored and protected from unauthorized access, malware, ransomware, insider threats, and supply chain vulnerabilities. Unlike IT security, OT security prioritizes maintaining uptime, physical safety, and process integrity—requiring a deep understanding of both cyber risks and operational requirements.
 Effective OT Security is not just about deploying technologies, but also fostering a culture of security awareness among teams, ensuring compliance with industry regulations (such as NIST, IEC 62443, and ISO/IEC 27019), and collaborating with vendors, partners, and regulators. Regular risk assessments and cross-discipline incident response protocols help your organization prepare for and rapidly mitigate cyber-physical threats.
 By prioritizing OT Security, your company safeguards critical infrastructure, minimizes downtime, protects against converging IT-OT cyber risks, and builds trust with customers and stakeholders. This proactive approach enables safe, resilient, and future-ready operations in a world where digital and physical systems are increasingly intertwined.
-`  // image: OTImg,
-    // image2: OTHero,
+`, image2: OTSEC3,
   },
 
   {
@@ -176,12 +179,11 @@ By prioritizing OT Security, your company safeguards critical infrastructure, mi
     description: `
 We at ACM help you to plan and create the structure of your company’s network infrastructure to ensure it supports current operations and future growth effectively and securely. We help in defining both the physical components—such as routers, switches, cabling and wireless access points—and the logical architecture, including IP addressing schemes, network segmentation and security protocols. A well-designed network aligns with your business goals by providing reliable, scalable, and high-performance connectivity for all users, applications, and devices across locations.
 Our key principles helps in guiding network design that includes scalability—to support growth without major rework; availability—to maintain continuous operation even during failures through redundancy; performance—to handle data traffic efficiently ensuring minimal delays and high bandwidth; and security—to protect sensitive data and prevent unauthorized access by implementing firewalls, intrusion detection, and segmented zones.
+
 ACM’s Network design also considers the optimal topology or arrangement of network devices and connections, such as star, mesh, or hybrid topologies, each chosen based on factors like cost, complexity, and fault tolerance. Logical segmentation through techniques like VLANs helps isolate traffic for security and performance, while careful hardware and software selection ensures compatibility and ease of management.
 A Comprehensive network design anticipates future needs by including flexible, modular elements and backup internet and failover paths to prevent downtime. ACM’s proactive approach reduces IT support workloads, enhances user experience with faster data flows and safeguards data compliance requirements.
-Implementing a thoughtfully designed network infrastructure empowers your company with secure, robust and scalable connectivity, essential for efficient collaboration, cloud integration and digital transformation initiatives. It enables your business to remain agile, minimize operational disruptions, and maintain a competitive edge in an increasingly connected world.
-
-`    // image: NetworkDesignImg,
-    // image2: NetworkDesignHero,
+Implementing a thoughtfully designed network infrastructure empowers your company with secure, robust and scalable connectivity, essential for efficient collaboration, cloud integration and digital transformation initiatives. It enables your business to remain agile, minimize operational disruptions, and maintain a competitive edge in an increasingly connected world.`    // image: NetworkDesignImg,
+    ,image2: NetworkDesign,
   },
   {
     title: "Cert-in Certified Security Audits",
@@ -193,7 +195,7 @@ ACM’s Key Steps in the Audit Lifecycle:
 • Scope Definition: Define assets (networks, apps, infra), type (e.g., VAPT), and roles.
 • Security Evaluation: Conduct automated and manual assessments (vuln scans, pentests, config reviews, code analysis).
 • Reporting & Remediation: Deliver detailed reports with risks, vulnerabilities, and remediation guidance, followed by re-testing.
-• Certification: Upon remediation, ACM provides CERT-In Compliance Certificates through authorized partners.
+• Certification: Upon remediation, ACM provides CERT-In Compliance Certificates.
 • Continuous Improvement: Encourage sustained cybersecurity maturity and regulatory alignment.
 
 Benefits for Your Organization:
@@ -202,10 +204,8 @@ Benefits for Your Organization:
 • Provides competitive edge by managing cyber risks.
 • Enables proactive cyber hygiene via expert-led audits.
 
-Note : ACM is in the process of official CERT-In empanelment. Meanwhile, certifications are delivered through certified collaborations._`
-
-        // image: CertInAuditImg,
-    // image2: CertInAuditHero,
+Note : ACM is in the process of official CERT-In empanelment. Meanwhile, certifications are delivered  through authorized partners.`,
+    image2: certin,
   },
 ];
 
@@ -330,13 +330,12 @@ Note : ACM is in the process of official CERT-In empanelment. Meanwhile, certifi
                           title: solution.title,
                           category: "Our Services",
                           description: solution.description,
-                          // image: solution.image,
-                          // image2: solution.image2,
+                          image2: solution.image2,
                         }
                       });
                       setShowDropdown(null);
                     }}
-                    className="text-gray-700 hover:text-[#0070c0] text-sm cursor-pointer transition-colors"
+                    className="text-[#0070c0] hover:text-[black] text-sm cursor-pointer transition-colors list-none "
                   >
                     {solution.title}
                   </li>

@@ -2,15 +2,12 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel.jsx';
 import CardInfo from '../components/CardInfo.jsx';
-// import FeatureGrid from '../components/FeatureGrid.jsx';
-import Footer from '../components/Footer.jsx';
-import JoinSection from '../components/JoinSection.jsx';   
+import Footer from '../components/Footer.jsx';   
 import Header from '../components/Header.jsx';
 import Cards from '../components/Cards.jsx';
-import FutureInnovation from '../assets/CSSEC.png';
+import FutureInnovation from '../assets/CSSEC.jpg';
 import EmpoweringAI from '../assets/EmpoweringAI.jpg';
 import InfoSection from '../components/InfoSection.jsx';
-import SimpleMap from '../components/SimpleMap.jsx';
 
 const Home = () => {
   return (
@@ -32,6 +29,23 @@ const Home = () => {
             smallTopic="Cyber Security"
             mainHeading="Safeguard Your Digital World"
             description="Detect, defend and prevent breaches in real time using sophisticated cyber security solutions that secures you against contemporary threats. "
+            details="
+Cyber Security & Management is the strategic and systematic approach your company takes to protect its digital infrastructure, sensitive data, and information systems from unauthorized access, cyber threats, and potential breaches. It combines advanced technologies, robust policies, proactive risk management, and continuous monitoring to ensure the confidentiality, integrity, and availability of your business-critical assets.
+
+In today’s interconnected and digital business environment, cyber threats such as malware, ransomware, phishing, insider threats, and sophisticated cyberattacks pose a significant risk to companies of all sizes. Effective cybersecurity management addresses these risks by implementing a comprehensive defense strategy that includes firewalls, intrusion detection and prevention systems, encryption, identity and access controls, vulnerability management, and incident response plans.
+
+Cybersecurity management is not just about technology — it involves governance, employee awareness, and compliance with legal and regulatory requirements to create a security-conscious culture throughout the organization. It requires ongoing assessment of security posture, rapid detection and mitigation of vulnerabilities, and a clear assignment of responsibility among the security team and leadership.
+
+By investing in cyber security management, your company ensures business continuity even in the face of cyber incidents, protects intellectual property and customer data, builds trust with stakeholders, and meets industry standards. Furthermore, it enables your business to adapt quickly to evolving cyber risks and complex regulatory landscapes, maintaining a strong security posture in a dynamic threat environment.
+
+Key benefits include minimized financial losses from cyberattacks, reduced operational disruptions, improved regulatory compliance, proactive risk identification, and fostering a resilient organizational culture that prioritizes security at every level.
+
+In summary, cyber security and management safeguard your company’s digital assets and reputation, delivering a secure and reliable operational foundation necessary for sustainable growth and competitive advantage.
+
+If you would like, I can also help you create a shorter summary or a more technical version for your website.
+
+This definition is synthesized from trusted sources describing corporate cybersecurity management frameworks and practices."
+
           />
         </div>
 
@@ -40,6 +54,20 @@ const Home = () => {
             image={EmpoweringAI}
             smallTopic="Artificial Intelligence"
             mainHeading="Optimizing Industry through AI"
+            details="ACM helps you in designing and integrating artificial intelligence solutions uniquely tailored to your company’s operations, workflows and strategic goals. Unlike generic AI tools, custom AI is built to fit your specific data, business challenges and industry context—delivering maximum efficiency, precision and competitive advantage.
+With AI-powered customization, your business can automate routine processes, analyze large datasets for actionable insights and deliver highly personalized user experiences. Whether it's through intelligent chatbots, dynamic recommendation engines, predictive analytics or workflow automation, AI drives operational excellence and creates new avenues for innovation and growth. These solutions are developed collaboratively with your to understand your current systems, future vision and compliance requirements—ensuring seamless integration and safeguarding sensitive data within your secure environment.
+Custom AI not only boosts productivity by streamlining repetitive tasks, but it also adapts and scales alongside your business. As your operations evolve, these solutions can be retrained and extended to accommodate new data, trends and business priorities. Advanced features like real-time decision-making, automated A/B testing and tailored customer engagement help your company optimize resources and make smarter, faster decisions based on real-time insights.
+Importantly, a customized approach to AI provides you with full control and ownership over your data, which is essential for meeting regulatory requirements and maintaining user privacy. By embedding AI into your IT ecosystem, your future-proof your business, staying agile and ready to seize emerging opportunities in a fast-changing digital landscape.
+
+Key Benefits of Customized AI Enhancement:
+
+• Solutions precisely aligned with your business objectives and KPIs.
+• Automated workflows that reduce manual effort and costs while improving operational speed and accuracy.
+• Personalization at scale—for both customer-facing experiences and internal processes.
+• Robust data privacy and seamless integration into existing systems.
+• Scalable, flexible architecture that grows alongside your company’s needs.
+• Proprietary AI that delivers differentiation and isn’t easily replicable by competitors."
+
             description="Discover how AI is enabling unprecedented automation, predictive insights and smarter decision making, transforming industries."
             reverse
           />
