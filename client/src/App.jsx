@@ -2,10 +2,8 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Products from "./pages/Products.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Support from "./pages/Support.jsx";
 import Consulting from "./pages/consulting.jsx";
 import ContactUs from "./pages/ContactUs.jsx";
 import CareersPage from "./pages/Careers.jsx";
@@ -35,8 +33,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/consulting" element={<Consulting />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/product" element={<Products />} />
           <Route path="/about-services" element={<AboutServices/>} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/careers" element={<CareersPage />} />

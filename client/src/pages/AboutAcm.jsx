@@ -176,7 +176,7 @@ const AboutAcm = () => {
             <h2 className="text-4xl sm:text-5xl font-bold mb-1">Our <span className="text-yellow-400">Mission</span></h2>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-4xl mb-4">🎓</div>
+                <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-semibold mb-2">Advance</h3>
                 <p className="text-sm opacity-80">Pushing the boundaries of the existing by conducting thorough and regress research</p>
               </div>
@@ -186,7 +186,7 @@ const AboutAcm = () => {
                 <p className="text-sm opacity-80">Discovering new knowledge and applying it creatively to develop novel solutions, technologies, methods or products.</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">🌟</div>
+                <div className="text-4xl mb-4">📈</div>
                 <h3 className="text-xl font-semibold mb-2">Impact</h3>
                 <p className="text-sm opacity-80">Tangible benifits that research outcomes brings to society, the Economy, or the Enviroment</p>
               </div>

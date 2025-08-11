@@ -9,7 +9,6 @@ import iconUrl from "leaflet/dist/images/marker-icon.png";
 import shadowUrl from "leaflet/dist/images/marker-shadow.png";
 import SimpleMap from "../components/SimpleMap";
 import Footer from "../components/Footer";
-import JoinSection from "../components/JoinSection";
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({ iconRetinaUrl, iconUrl, shadowUrl });
 
