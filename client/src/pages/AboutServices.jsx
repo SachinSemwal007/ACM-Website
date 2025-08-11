@@ -28,8 +28,9 @@ const AboutServices = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500" />
           <div className="absolute inset-0 flex items-center  justify-center">
             <div className="text-center text-white px-6 max-w-4xl transform group-hover:scale-105 transition-transform duration-500">
+             
               {displayTitle !== "Cert-in Certified Security Audits" && (
-                  <h1 className="text-lg md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-6 text-white text-shadow-sm text-shadow-black  drop-shadow-2xl">
+                  <h1 className="text-md md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-6 text-white text-shadow-sm text-shadow-black  drop-shadow-2xl">
                     {displayTitle}
                   </h1>
                 )}

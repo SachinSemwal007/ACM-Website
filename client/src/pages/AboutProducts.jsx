@@ -29,9 +29,13 @@ const AboutProducts = () => {
           
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white px-6 max-w-4xl transform group-hover:scale-105 transition-transform duration-500">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white text-shadow-sm text-shadow-black drop-shadow-2xl">
+              {/* <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white text-shadow-sm text-shadow-black drop-shadow-2xl">
+                {displayTitle}
+              </h1> */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white text-shadow-sm text-shadow-black drop-shadow-2xl">
                 {displayTitle}
               </h1>
+
               <div className="w-24 h-1 bg-gradient-to-r from-blue-900 to-indigo-500 mx-auto rounded-full"></div>
             </div>
           </div>
