@@ -395,17 +395,29 @@ Note : ACM is in the process of official CERT-In empanelment. Meanwhile, certifi
                         </div>
                       ))}
 
-                    {item === "solution" &&
+                      {item === "solution" &&
                       solutionData.map((solution) => (
-                        <div
-                          key={solution.title}
-                          onClick={() => {
-                            navigate(`/solutions/${solution.title.toLowerCase().replace(/\s+/g, "-")}`);
-                            setIsOpen(false);
-                          }}
-                          className="text-[#0070c0] font-medium text-sm cursor-pointer mb-1"
-                        >
-                          {solution.title}
+                        <div key={solution.title} className="mb-2">
+                          
+                          <ul className="pl-2 mt-1 space-y-1">
+                              <li
+                                key={solution.title}
+                                onClick={() => {
+                                  navigate("/about-products", {
+                                    state: {
+                                      title: solution.title,
+                                      category: "Our Services",
+                                      description: solution.description,
+                                      image2: solution.image2,
+                                    },
+                                  });
+                                  setIsOpen(false);
+                                }}
+                                className="text-gray-600 text-sm cursor-pointer"
+                              >
+                                <div className="text-[#0070c0] font-medium text-sm">{solution.title}</div>
+                              </li>
+                          </ul>
                         </div>
                       ))}
                   </div>
