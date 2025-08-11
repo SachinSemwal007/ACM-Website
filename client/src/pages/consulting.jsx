@@ -1,7 +1,7 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { useNavigate } from "react-router-dom";
-import Consultancy from "../assets/Consultancy.jpg"
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import { useNavigate } from "react-router-dom"
+import { assets } from '../assets/assets'
 
 const Consulting = () => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const Consulting = () => {
 
       <section className="relative h-[60vh] w-full mt-1">
         <img
-          src={Consultancy}
+          src={assets.Consultancy}
           alt="Consulting Hero"
           className="object-cover w-full h-full"
         />

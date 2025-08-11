@@ -1,5 +1,5 @@
 import React from "react";
-import acmLogo from "../assets/ACM2.png";
+import { assets } from "../assets/assets";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -13,7 +13,7 @@ const CookiesPolicy = () => {
           <div className="bg-[#0070c0] text-white text-center py-6 px-6 relative">
             <div className="absolute top-1 left-1/2 transform -translate-x-1/2">
               <img
-                src={acmLogo}
+                src={assets.ACM2}
                 alt="ACM Logo"
                 className="w-20 h-20 rounded-full shadow-lg border-4 border-white pb-2 pr-1"
               />

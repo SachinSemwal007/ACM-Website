@@ -1,7 +1,8 @@
 import React from "react";
-import acmLogo from "../assets/ACM2.png"
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { assets } from "../assets/assets";
 
 const PublicPolicy = () => {
   return (
@@ -16,7 +17,7 @@ const PublicPolicy = () => {
           {/* Logo in the center top */}
           <div className="absolute top-1 left-1/2 transform -translate-x-1/2">
             <img
-              src={acmLogo}
+              src={assets.ACM2}
               alt="ACM Logo"
               className="w-20 h-20 rounded-full shadow-lg border-4 border-white pb-2 pr-1"
             />

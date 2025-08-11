@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logoLight from '../assets/ACM10.png';
 import { FaFacebook } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import { SiLinkedin } from "react-icons/si";
+import { assets } from "../assets/assets";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ const Footer = () => {
         {/* Logo Section */}
         <div className="w-full lg:w-1/3 flex justify-start items-center text-center lg:text-left">
           <img
-            src={logoLight}
+            src={assets.ACM10}
             alt="Company Logo"
             className="w-[60%] sm:w-[50%] md:w-[40%] lg:w-[65%] xl:w-[65%] max-w-[300px] mx-auto lg:mx-0"
           />

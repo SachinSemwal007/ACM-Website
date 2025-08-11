@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import img2 from "../assets/AIbrain.jpg";
-import img3 from "../assets/DEFENSEDR1.jpg";
-import img4 from "../assets/OTSEC3.jpg";
+import React, { useState } from "react"
+import { assets } from "../assets/assets.js";
 import { useNavigate } from "react-router-dom";
 
 const slides = [
@@ -16,7 +14,7 @@ A robust OT security framework ensures that control systems such as SCADA, PLCs,
 Effective OT Security is not just about deploying technologies, but also fostering a culture of security awareness among teams, ensuring compliance with industry regulations (such as NIST, IEC 62443, and ISO/IEC 27019), and collaborating with vendors, partners, and regulators. Regular risk assessments and cross-discipline incident response protocols help your organization prepare for and rapidly mitigate cyber-physical threats.
 By prioritizing OT Security, your company safeguards critical infrastructure, minimizes downtime, protects against converging IT-OT cyber risks, and builds trust with customers and stakeholders. This proactive approach enables safe, resilient, and future-ready operations in a world where digital and physical systems are increasingly intertwined.
 `,
-    image: img4,
+    image: assets.OTSEC3,
   },
   {
     topic: "INNOVATE, AUTOMATE & ELEVATE",
@@ -37,7 +35,7 @@ Key Benefits of Customized AI Enhancement:
 • Proprietary AI that delivers differentiation and isn’t easily replicable by competitors.
 
 `,
-    image: img2,
+    image: assets.AIbrain,
   },
   {
     topic: "NATIONAL DEFENSE",
@@ -47,7 +45,7 @@ Key Benefits of Customized AI Enhancement:
     description:`We are excited to announce the development of our project BH 9 — an AI-Based Aircraft Recognition System. This innovative system will leverage advanced machine learning and computer vision technologies to accurately detect, classify, and track various types of aircraft in real-time.Designed for applications in defence, air traffic control, and airport management, the system will enhance situational awareness, improve response times and strengthen security measures. By analysing visual and radar data with high precision, it will significantly reduce human error and provide faster, more reliable aircraft identification.This project marks a major step toward smarter, automated aviation monitoring solutions, and is set to redefine operational efficiency and safety standards in the aerospace industry.
        `,
     link: "#",
-    image: img3,
+    image: assets.DEFENSEDR1,
   },
 ];
 

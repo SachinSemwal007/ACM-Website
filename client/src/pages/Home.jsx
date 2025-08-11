@@ -5,8 +5,8 @@ import CardInfo from '../components/CardInfo.jsx';
 import Footer from '../components/Footer.jsx';   
 import Header from '../components/Header.jsx';
 import Cards from '../components/Cards.jsx';
-import FutureInnovation from '../assets/CSSEC.jpg';
-import EmpoweringAI from '../assets/EmpoweringAI.jpg';
+
+import { assets } from '../assets/assets.js';
 import InfoSection from '../components/InfoSection.jsx';
 
 const Home = () => {
@@ -25,7 +25,7 @@ const Home = () => {
 
         <div className="relative">
           <CardInfo
-            image={FutureInnovation}
+            image={assets.FutureInnovation}
             smallTopic="Cyber Security"
             mainHeading="Safeguard Your Digital World"
             description="Detect, defend and prevent breaches in real time using sophisticated cyber security solutions that secures you against contemporary threats. "
@@ -51,7 +51,7 @@ This definition is synthesized from trusted sources describing corporate cyberse
 
         <div className="relative">
           <CardInfo
-            image={EmpoweringAI}
+            image={assets.EmpoweringAI}
             smallTopic="Artificial Intelligence"
             mainHeading="Optimizing Industry through AI"
             details="ACM helps you in designing and integrating artificial intelligence solutions uniquely tailored to your company’s operations, workflows and strategic goals. Unlike generic AI tools, custom AI is built to fit your specific data, business challenges and industry context—delivering maximum efficiency, precision and competitive advantage.

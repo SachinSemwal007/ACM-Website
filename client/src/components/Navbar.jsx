@@ -1,36 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Menu, X, Search } from "lucide-react";
-import logo from "../assets/ACM9.png";
-import YogyataPortal from "../assets/YogyataPortal.png"
-import YOG1 from "../assets/YOG1.jpg"
-import HRM from "../assets/hrm.jpg"
-import HRAutomation from "../assets/HRAutomation.jpg"
-import GPSAttendance from "../assets/GPSAttendance.png"
-import IntelligentHiring from "../assets/IntelligentHiring.png"
-import ADetect from "../assets/ADetect.png"
-import GPS from "../assets/GPS.jpg"
-import SmartGlasses from "../assets/SmartGlasses.png"
-import SandTimeAttendance from "../assets/SandTimeAttendance.png"
-import DayTrackerGPS from "../assets/DayTrackerGPS.png"
-import NextHire1 from "../assets/NextHire1.jpg"
-import BH91 from "../assets/BH91.jpg"
-import GpsAntenna from "../assets/GpsAntenna.jpg"
-import Attendance from "../assets/Attendance.jpg"
-import SmartSunGlasses from "../assets/SmartSunGlasses.png"
-
-
-// solutions images
-
-import certin from "../assets/certin.png"
-import CyberSecuritycopy from '../assets/CSSEC.jpg'
-import NetworkDesign from "../assets/NetworkDesign.jpg"
-import NetworkInfra from "../assets/networkInfra.jpg"
-import SoftwareDevelopment from "../assets/SoftwareDevelopment.jpg"
-import EmpoweringAI from "../assets/EmpoweringAI.jpg"
-import OTSEC3 from "../assets/OTSEC3.jpg"
-
 import { useNavigate } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
+import { assets } from "../assets/assets";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -46,26 +17,22 @@ const Navbar = () => {
         {
           title: "Yogyata Portal",
           description: "In today’s fast-evolving business landscape, attracting and securing top talent is more critical and more challenging than ever. Traditional recruitment processes, often time-consuming and prone to bias, are rapidly being transformed by advances in Artificial Intelligence (AI). An AI-Based Recruitment Management System offers a smarter, faster, and more efficient solution for modern hiring needs.This system leverages AI technologies such as machine learning, natural language processing and predictive analytics to automate and enhance every stage of the recruitment lifecycle — from sourcing and screening candidates to scheduling and taking examinations. By analysing large volumes of candidate data, identifying best-fit applicants, and minimizing human bias, it enables organizations to make more informed, data-driven hiring decisions.With capabilities like intelligent resume parsing, automated communications, skill-matching algorithms, and real-time analytics, an AI-based recruitment management system not only improves the quality of hires but also significantly reduces time-to-hire and recruitment costs. Ultimately, it empowers HR teams to focus more on strategic initiatives and candidate engagement, ensuring a competitive edge in attracting top talent in a highly dynamic market.",
-          image: YogyataPortal,
-          image2:YOG1
+          image2:assets.YogyataPortal
         },
         {
           title: "SquadForce 360",
           description: "Managing human resources efficiently is fundamental to an organization's success. As businesses grow and employee needs become more complex, traditional manual HR processes often struggle to keep pace. A fully automated Human Resource Management System (HRMS) software offers a transformative solution, streamlining all core HR functions through intelligent automation and centralized management.Squadforce 360 is a comprehensive platform automates the entire HR lifecycle — including recruitment, onboarding, payroll, attendance tracking, performance management, employee self-service, compliance management and more. By eliminating repetitive administrative tasks, the system enhances accuracy, boosts operational efficiency, and ensures a seamless experience for both HR teams and employees.Built with advanced features such as real-time analytics, cloud accessibility, secure data management, and customizable workflows, the fully automated application Squadforce 360 empowers organizations to make strategic, data-driven decisions. It helps foster better employee engagement, ensures regulatory compliance, and reduces overall operational costs, making it an essential tool for modern, agile workplaces.By integrating automation into HR management, businesses can focus more on talent development and strategic growth, positioning themselves strongly for future success.",
-          image:HRM,
-          image2:HRAutomation
+          image2:assets.HRM
         },
         {
           title: "DayTracker - GPS Attendance System",
           description: "DayTracker is a GPS-based attendance system that uses real-time location tracking to verify employee presence at designated worksites. It automates attendance logging, reduces manual errors, and enhances accountability. With geofencing, time-stamping, and centralized reporting, DayTracker streamlines workforce management for field teams, remote staff, and on-site personnel.",
-          image:GPSAttendance,
-          image2:DayTrackerGPS,
+          image2:assets.DayTrackerGPS,
         },
         {
           title: "Nexthire",
           description: "Nexthire is a software platform that automates and streamlines the entire hiring process, allowing organizations to efficiently manage job postings, candidate applications, interview scheduling, and onboarding from a central digital workspace. Key features typically include applicant tracking, automated communication and analytics to monitor recruitment effectiveness. By minimizing manual tasks and integrating with various job boards and HR systems, Nexthire not only saves organizations time and reduces operational costs but also improves the candidate experience through timely updates and a smoother application process.",
-          image: IntelligentHiring,
-          image2: NextHire1,
+          image2: assets.NextHire1,
         },
       ],
     },
@@ -75,14 +42,12 @@ const Navbar = () => {
         {
           title: "BH 9",
           description: "We are excited to announce the development of our project BH 9 — an AI-Based Aircraft Recognition System. This innovative system will leverage advanced machine learning and computer vision technologies to accurately detect, classify, and track various types of aircraft in real-time.Designed for applications in defence, air traffic control, and airport management, the system will enhance situational awareness, improve response times and strengthen security measures. By analysing visual and radar data with high precision, it will significantly reduce human error and provide faster, more reliable aircraft identification.This project marks a major step toward smarter, automated aviation monitoring solutions, and is set to redefine operational efficiency and safety standards in the aerospace industry.",
-          image: ADetect,
-          image2: BH91,
+          image2: assets.BH91,
         },
         {
           title: "Epalutte GPS Antenna",
           description: "The Epaulette GPS Antenna System incorporates advanced GNSS technology into a compact, wearable form factor, enabling precise real-time positioning in challenging environments. Designed for defense, security, and field operations, it ensures continuous geolocation, improved signal acquisition, and seamless integration with tactical communication systems for mission-critical situational awareness and coordination.",
-          image: GPS,
-          image2: GpsAntenna,
+          image2: assets.GpsAntenna,
         },
       ],
     },
@@ -92,14 +57,12 @@ const Navbar = () => {
         {
           title: "Smart Sunglasses",
           description: "Smart Sunglasses combine AI, AR (Augmented Reality), and sensor technology to deliver real-time navigation, facial recognition, and contextual information overlays. Equipped with voice assistants, gesture controls, and Bluetooth connectivity, they enhance situational awareness, hands-free communication, and immersive experiences for users in outdoor, tactical, or professional environments.",
-          image:SmartGlasses,
-          image2:SmartSunGlasses,
+          image2:assets.SmartSunGlasses,
         },
         {
           title: "SandTime - AI Attendance System",
           description: "SandTime is an AI-powered attendance management system that utilizes facial recognition, geofencing, and real-time analytics to automate employee check-ins, monitor workforce activity, and prevent time fraud. Designed for scalability and accuracy, it integrates seamlessly with HR platforms, ensuring efficient, transparent, and data-driven attendance tracking across organizations.",
-          image: SandTimeAttendance,
-          image2: Attendance,
+          image2:assets.Attendance,
         },
       ],
     },
@@ -111,7 +74,7 @@ const Navbar = () => {
   {
     title: "Network Security & Management",
     description: "ACM Network Security & Management is a comprehensive process of protecting your network infrastructure, including both physical and virtual devices, from unauthorized access, cyber threats, and vulnerabilities. It involves applying security policies, using tools like firewalls, intrusion detection/prevention systems, encryption, and access controls to ensure the confidentiality, integrity, and availability of sensitive data and network resources. This centralized management approach provides the you with real-time visibility, automated policy enforcement, and faster threat detection, enabling efficient network monitoring, reduced human errors, regulatory compliance and business continuity. Ultimately, it helps safeguard critical information, streamline administration and adapt security measures to evolving cyber risks, ensuring secure and reliable network operations across all users and endpoints.",
-    image2: NetworkInfra,
+    image2: assets.NetworkInfra,
   },
 
   {
@@ -126,7 +89,7 @@ Beyond functionality, customized software development prioritizes security, ensu
 
 Investing in customized software development means choosing innovation and efficiency tailored specifically for your business. It unlocks new potential by streamlining operations, enhancing productivity, and delivering a superior user experience—all critical factors to staying competitive and agile in today’s fast-paced market.
 `,
-    image2:SoftwareDevelopment,
+    image2:assets.SoftwareDevelopment,
   },
   {
     title: "Customized Enhancements with AI",
@@ -143,7 +106,7 @@ Key Benefits of Customized AI Enhancement:
 • Robust data privacy and seamless integration into existing systems.
 • Scalable, flexible architecture that grows alongside your company’s needs.
 • Proprietary AI that delivers differentiation and isn’t easily replicable by competitors.`,
-    image2: EmpoweringAI,
+    image2: assets.EmpoweringAI,
   },
   {
     title: "Cyber Security & Management",
@@ -158,7 +121,7 @@ Key benefits include minimized financial losses from cyberattacks, reduced opera
 In summary, cyber security and management safeguard your company’s digital assets and reputation, delivering a secure and reliable operational foundation necessary for sustainable growth and competitive advantage.
 If you would like, I can also help you create a shorter summary or a more technical version for your website.
 This definition is synthesized from trusted sources describing corporate cybersecurity management frameworks and practices.`,
-    image2: CyberSecuritycopy,
+    image2: assets.CyberSecuritycopy,
   },
 
 
@@ -171,7 +134,7 @@ Modern industrial environments are increasingly connected, bridging the gap betw
 A robust OT security framework ensures that control systems such as SCADA, PLCs, and DCS are continuously monitored and protected from unauthorized access, malware, ransomware, insider threats, and supply chain vulnerabilities. Unlike IT security, OT security prioritizes maintaining uptime, physical safety, and process integrity—requiring a deep understanding of both cyber risks and operational requirements.
 Effective OT Security is not just about deploying technologies, but also fostering a culture of security awareness among teams, ensuring compliance with industry regulations (such as NIST, IEC 62443, and ISO/IEC 27019), and collaborating with vendors, partners, and regulators. Regular risk assessments and cross-discipline incident response protocols help your organization prepare for and rapidly mitigate cyber-physical threats.
 By prioritizing OT Security, your company safeguards critical infrastructure, minimizes downtime, protects against converging IT-OT cyber risks, and builds trust with customers and stakeholders. This proactive approach enables safe, resilient, and future-ready operations in a world where digital and physical systems are increasingly intertwined.
-`, image2: OTSEC3,
+`, image2: assets.OTSEC3,
   },
 
   {
@@ -183,7 +146,7 @@ Our key principles helps in guiding network design that includes scalability—t
 ACM’s Network design also considers the optimal topology or arrangement of network devices and connections, such as star, mesh, or hybrid topologies, each chosen based on factors like cost, complexity, and fault tolerance. Logical segmentation through techniques like VLANs helps isolate traffic for security and performance, while careful hardware and software selection ensures compatibility and ease of management.
 A Comprehensive network design anticipates future needs by including flexible, modular elements and backup internet and failover paths to prevent downtime. ACM’s proactive approach reduces IT support workloads, enhances user experience with faster data flows and safeguards data compliance requirements.
 Implementing a thoughtfully designed network infrastructure empowers your company with secure, robust and scalable connectivity, essential for efficient collaboration, cloud integration and digital transformation initiatives. It enables your business to remain agile, minimize operational disruptions, and maintain a competitive edge in an increasingly connected world.`    // image: NetworkDesignImg,
-    ,image2: NetworkDesign,
+    ,image2: assets.NetworkDesign,
   },
   {
     title: "Cert-in Certified Security Audits",
@@ -205,7 +168,7 @@ Benefits for Your Organization:
 • Enables proactive cyber hygiene via expert-led audits.
 
 Note : ACM is in the process of official CERT-In empanelment. Meanwhile, certifications are delivered  through authorized partners.`,
-    image2: certin,
+    image2: assets.certin,
   },
 ];
 
@@ -239,7 +202,7 @@ Note : ACM is in the process of official CERT-In empanelment. Meanwhile, certifi
             onClick={() => navigate("/")}
             className="flex-shrink-0 pt-1 pr-1 cursor-pointer items-center h-17 bg-[#0070c0]"
           >
-            <img src={logo} alt="ACM" className="h-15 w-auto p-1" />
+            <img src={assets.ACM9} alt="ACM" className="h-15 w-auto p-1" />
           </div>
 
           <div className="hidden md:flex space-x-6 w-full pl-7 lg:pl-16">
@@ -305,7 +268,6 @@ Note : ACM is in the process of official CERT-In empanelment. Meanwhile, certifi
                               title: sub.title,
                               category: product.title,
                               description: sub.description,
-                              image: sub.image,
                               image2: sub.image2,
                             }
                           });

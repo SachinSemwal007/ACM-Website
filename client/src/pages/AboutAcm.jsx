@@ -1,11 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import img from "../assets/WorkACM.png";
-import img2 from "../assets/CyberSecurity.jpg";
-import img3 from "../assets/DEFENSEDR1.jpg";
-import img4 from "../assets/EmpoweringAI.jpg";
-import img5 from "../assets/FutureInnovation.jpg";
+
+import { assets } from "../assets/assets";
 
 const AboutAcm = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -16,25 +13,25 @@ const AboutAcm = () => {
       title: "R&D Planning",
       description:
         "ACM R&D planning is the structured process by which we chart the course for innovative activities to meet strategic goals. It involves identifying key areas for technological advancement or product improvement, setting clear objectives, allocating resources, and establishing timelines. By proactively assessing risks and monitoring progress, we ensure that R&D efforts remain effective and adaptable, enabling us to stay competitive amid rapidly evolving market and technology landscapes.",
-      image: img2,
+      image: assets.img2,
     },
     {
       title: "Defense Research",
       description:
         "Defense research for ACM involves systematically exploring and developing technologies and solutions to address security needs and enhance national security capabilities. This strategic effort requires identifying emerging threats, investing in advanced materials, systems, or software, and collaborating with government agencies or defense clients. By prioritizing innovation and robust risk management, we engage ourselves in defense research to strengthen our competitive position, contribute to technological self-reliance, and ensure we can adapt to evolving security environments and compliance requirements.",
-      image: img3,
+      image: assets.img3,
     },
     {
       title: "Skill Upgradation",
       description:
         "Skill upgradation for ACM involves designing and implementing targeted training programs to continuously enhance the capabilities of its workforce and outsider technology enthusiasts . By assessing current skill levels and future business needs, we identify key areas where employees or candidates require development—such as new technologies, leadership skills or process improvements. Structured learning opportunities, including workshops, online/offline courses and mentorship, we not only address skill gaps but also empower to adapt to changing industry trends. This commitment to upskilling strengthens organizational agility, fosters employee engagement, and ensures sustained business growth in a dynamic market environment.",
-      image: img4,
+      image: assets.img4,
     },
     {
       title: "Industry Academia Collaboration ",
       description:
         "Industry-academia collaboration by ACM involves actively partnering with educational institutions to advance research, spur innovation, and develop industry-ready talent. Through internships, joint research projects, curriculum development, and knowledge-sharing sessions, we leverage academic expertise and cutting-edge ideas while providing real-world perspectives and resources to universities. Such collaborations enable us and universities to address skill gaps, accelerate technology transfer, and co-create solutions to complex challenges. Moreover, these partnerships create a pipeline of skilled graduates and foster a culture of continuous learning and innovation, benefiting institutes to broader academic ecosystem.",
-      image: img5,
+      image: assets.img5,
     },
   ];
 
@@ -127,7 +124,7 @@ const AboutAcm = () => {
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
             <div className="relative group w-full lg:w-1/2">
               <div className="absolute -inset-4 bg-gradient-to-r from-[#0070c0] to-[#00a8ff] rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
-              <img src={img} alt="About ACM" className="relative w-full h-full max-h-[500px] object-contain rounded-2xl shadow-2xl transform group-hover:scale-105 transition duration-300" />
+              <img src={assets.img} alt="About ACM" className="relative w-full h-full max-h-[500px] object-contain rounded-2xl shadow-2xl transform group-hover:scale-105 transition duration-300" />
             </div>
             <div className="w-full lg:w-1/2 space-y-6">
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Who <span className="text-[#0070c0]">We Are</span></h2>

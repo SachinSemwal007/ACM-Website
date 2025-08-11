@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import acmLogo from "../assets/ACM2.png";
+import { assets } from "../assets/assets";
 
 
 const Privacy = () => {
@@ -12,7 +12,7 @@ const Privacy = () => {
       <div className="bg-[#0070c0] text-white text-center py-6 px-6 relative w-[50%] mx-auto rounded-sm shadow-md shadow-black mt-2">
         <div className="absolute top-1 left-1/2 transform -translate-x-1/2 shadow-lg ">
           <img
-            src={acmLogo}
+            src={assets.ACM2}
             alt="ACM Logo"
             className="w-20 h-20 rounded-full shadow-lg border-4 border-white pb-2 pr-1"
           />
