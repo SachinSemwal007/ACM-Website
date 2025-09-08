@@ -57,13 +57,13 @@ export default function SimpleMap() {
               fulladd:
                 "Software Technology Parks of India, Namkum Industrial Area, Namkum, Ranchi - 834010, Jharkhand, India.",
             },
-            {
-              name: "Mumbai Office",
-              lat: 18.9389,
-              lng: 72.8258,
-              fulladd:
-                "Plot-58, Laxmi Bhuvan, D Road, Wankhede Stadium, Churchgate, Mumbai - 400020, Maharashtra, India.",
-            },
+            // {
+            //   name: "Mumbai Office",
+            //   lat: 18.9389,
+            //   lng: 72.8258,
+            //   fulladd:
+            //     "Plot-58, Laxmi Bhuvan, D Road, Wankhede Stadium, Churchgate, Mumbai - 400020, Maharashtra, India.",
+            // },
           ],
         },
       ],
